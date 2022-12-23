@@ -1,30 +1,27 @@
 from __future__ import absolute_import
 
 import json
+import math
 import os
+import random
 import re
 import glob
-
-import magic
 import logging
-from logging import config
-import requests
-import telegram
-from moviepy.editor import VideoFileClip
-from deep_translator import GoogleTranslator
 
-from app.app import celery, Config, log_config, bot
-from extraction.dump_category import dump_categories
-from processors.category_filling import category_fill
-from processors.category_processor import category_processor
-from processors.options_processor import options_fill
-from processors.text_processor import text_processor
+from logging import config
+from progressbar import progressbar
+import requests
+from deep_translator import GoogleTranslator
+import tqdm
+
+from config.logger import log_config
+from extraction.dump_category import check_category, dump_categories
 
 # Declaring global variables
 config.dictConfig(log_config)
 logger = logging.getLogger('mainLog')
-ts = GoogleTranslator(source='ar', target='en')
-token = Config['Telegram']['KAtoken']
+ts = GoogleTranslator(source="tr", target="en")
+ts2 = GoogleTranslator(source="en", target="ar")
 payload = {}
 headers = {
     "Authorization": "Bearer secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7",
@@ -34,201 +31,350 @@ eurl = "https://app.ecwid.com/api/v3/63690252/products"
 GifFile = None
 ResContent = content = VidFile = seoNameEn = None
 count = 0
-MCategory = int(Config['Telegram']['COcategory'])
 ProcessedMsgID = False
 body = {}
 
 # Creates a product and assign the main product image
-
-
-@celery.task()
-def create_product(message, MCategory):
-    global ResContent, Main, body, seoNameEn
-
-    # Dumping categories into a dict var
-    categories = dump_categories(MCategory)
+def create_product(products):
+    global ResContent, Main, body, seoNameEn, switchLock
+    epayload = {}
+    eheaders = {
+        "Authorization": "Bearer secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7",
+        "Content-Type": 'application/json;charset: utf-8'
+    }
 
     # Checking message type
-    if message:
+    for product in progressbar(products):
+        switchLock = False
+        product_list = products[product]
+        MCategory = products[product][0]['category_id']
+        # Dumping categories into a dict var
+        categories = dump_categories(MCategory)
         try:
-            # Text processing
-            RefinedTxt = text_processor(message)
-
-            # Condition to check for invalid message length
-            if len(RefinedTxt) < 7:
-                clearMediaList(files=True)
-                logger.error(
-                    f"Invalid message length found | Length: {len(RefinedTxt)}"
-                )
-                return
-
-            # Creating variables with ready to use data from telegram message
-            name = RefinedTxt[1].strip()
-            nameEn = ts.translate(name)
-            nameEn = re.sub('a ', '', nameEn)
-            nameEn = nameEn.capitalize()
-            # Checking for invalid criteria
-            if re.search('السيري', name) or re.search('السيري', name):
-                clearMediaList(files=True)
-                logger.error(
-                    f'Invalid name found ')
-                return
-
-            size = RefinedTxt[2]
-            size = re.sub('\D', '', size)
-            pcQty = RefinedTxt[3]
-            pcQty = int(re.sub('\D', '', pcQty))
-            price = RefinedTxt[4]
-            price = float(re.sub('[^\d|^\d.\d]', '', price))
-            pcPrice = RefinedTxt[5]
-            pcPrice = int(re.sub('\D', '', pcPrice))
-            sku = RefinedTxt[6]
-            if re.search('-', sku):
-                sku = sku.replace("كود الموديل", "")
-                sku = sku.replace('-', '')
-                sku = sku.split()
-                sku = str(sku[1]) + '-' + str(sku[0])
-            else:
-                sku = re.sub('[^a-zA-Z\d\-]', '', sku)
-            true = True
-            false = False
-
-            # Category values
-            jCategory = RefinedTxt[0].strip()
-            if re.search('ماركه', jCategory) or re.search('ماركة', jCategory):
-                clearMediaList(files=True)
-                logger.warning(
-                    f'Brand found with sku: {sku}')
-                return
-            jCatName = re.split(r'\W+', jCategory)
-            jCatMain = ''
-            jCatSec = ''
-            jCatSecRev = ''
-            ca = set(categories['name'])
-            jCatMain, jCatSec = category_processor(jCategory, jCatName,
-                                                   jCatSec, jCatSecRev, jCatMain, ca)
-            CatName = categories['name']
-            CatId = categories['id']
-
-            # Options values
-            OpValues = [2, 3, 5]
-            OpBody = []
-
-            # Extract options from processed text
-            options_fill(RefinedTxt, false, OpValues, OpBody)
-
-            # Assigning categories using a for loop and a condition to match stored category list
-            secName, Category, MainCategory, Cats = category_fill(
-                jCatMain, jCatSec, CatName, CatId, MCategory)
-
-            # Create a product request body
-            if secName:
-                if categories['name']:
-                    for catNam in categories['name']:
-                        if catNam == secName:
-                            seoNameEn = categories['name'].index(catNam)
-                            break
-
-                seoNameEn = categories['nameEn'][seoNameEn] + ' / ' + nameEn
-                seoName = secName + ' / ' + name
-            else:
-                seoName = name
-                seoNameEn = nameEn
-            body = {
-                "sku": sku,
-                "unlimited": true,
-                "inStovalue": true,
-                "name": nameEn,
-                "nameTranslated": {
-                    "ar": name,
-                    "en": nameEn
-                },
-                "price": price,
-                "enabled": true,
-                "options": OpBody,
-                "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
-                "descriptionTranslated": {
-                    "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة    من الملابس التركية واحدث الصيحات في الأزياء النسائية والرجالية والاطفال التي تناسب جميع الأذواق.   بمقاسات وألوان مختلفة.</b>",
-                    "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
-                },
-                "categoryIds": Category,
-                "categories": Cats,
-                "defaultCategoryId": MainCategory,
-                "seoTitle": f'{seoNameEn}',
-                "seoTitleTranslated": {
-                    "ar": seoName,
-                    "en": seoNameEn
-                },
-                "seoDescription": "Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colours.",
-                "seoDescriptionTranslated": {
-                    "ar": "اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة    من الملابس التركية واحدث الصيحات في الأزياء النسائية والرجالية والاطفال التي تناسب جميع الأذواق.   بمقاسات وألوان مختلفة.",
-                    "en": "Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colours."
-                },
-                "attributes": [{"name": "Note", "nameTranslated": {"ar": "ملاحظة", "en": "Note"},
-                                "value": "The choice of colors is done at the start of processing the order.",
-                                "valueTranslated": {
-                    "ar": "اختيار الألوان يتم عند البدء بتجهيز الطلبية",
-                          "en": "The choice of colors is done at the start of processing the order."
-                }, "show":   "DESCR", "type": "UPC"}, {"name": "Brand", "nameTranslated": {"ar": "العلامة التجارية", "en": "Brand"},
-                                                       "value": "Al Beyan Fashion™",
-                                                       "valueTranslated": {
-                    "ar": "Al Beyan Fashion™",
-                    "en": "Al Beyan Fashion™"
-                }, "show":   "DESCR", "type": "BRAND"}],
-                "subtitle": "The displayed price is for the full set",
-                "subtitleTranslated": {
-                    "ar": "السعر المعروض للسيري كامل",
-                    "en": "The displayed price is for the full set"
-                }
-            }
-
-            # Parsing collected data
-            ResContent, resCode = poster(body)
-            # Feedback and returning response and media_path new values
-            if resCode == 200:
-                # Created product ID
-                if 'id' in ResContent:
-                    ItemId = ResContent['id']
-                    logger.info(
-                        f"Product created successfully with ID: {ItemId} | SKU: {sku}"
-                    )
-                    return ItemId
+            for data in tqdm(product_list, desc=f'New product %d'):
+                # Creating variables with ready to use data from telegram message
+                name = f'{product} Shoes'
+                nameAr = ts2.translate(f'{product} Shoes')
+                size = data['sizes']
+                pcQty = 0
+                if type(size) == str:
+                    processed_int = re.sub(r'\d\d:|Asorti:|\d\d.|Asorti :|=\d\W\w+\s\w+|=\d\W\w+|Asorti|\d\w+', '', size).strip()
+                    processed_int = processed_int.replace(':', ' ')
+                    pcQty = sum(map(int, processed_int.split()))
+                    if pcQty <= 1:
+                        pcQty = 8
                 else:
-                    logger.error(
-                        f"Product ID is empty?! | Response: {ResContent} | Sku: {sku}")
-                    return None
+                    pcQty = 8
+                pcPrice = math.ceil(((data['price'] * 1.04) / 18) + 1.5)
+                price = pcPrice * pcQty
+                sku = f"BFA{data['code']}"
+                color = data['color']
+                colorAr = ts2.translate(color)
+                age = data['age']
+                base = data['base']
+                baseAr = base
+                gender = genderAr = None
+                if re.search('Men|Kid', data['category']):
+                    gender = 'Male'
+                    genderAr = 'ذكر'
+                elif re.search('Baby', data['category']):
+                    gender = 'Unisex'
+                    genderAr = 'للجنسين'   
+                else:
+                    gender = 'Female'
+                    genderAr = 'أنثى'
+                true = True
+                false = False
 
-            elif resCode == 400:
-                logger.error(
-                    f"New product body request parameters are malformed | Sku: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
-                )
-                clearMediaList(files=True)
-                return None
-            elif resCode == 409:
-                logger.warning(
-                    f"SKU_ALREADY_EXISTS: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
-                )
-                clearMediaList(files=True)
-                return None
-            else:
-                logger.info(
-                    f"Failed to create a new product")
-                clearMediaList(files=True)
-                return None
+                # Assigning categories
+                jCatMain = data['category_id']
+                jCatSec = data['sub-category']
+                jCatSecAr = ts2.translate(jCatSec)
+                CatName = categories['nameEn']
+                CatNameAr = categories['name']
+                CatId = categories['id']
+                if jCatSec == 'Bot':
+                    jCatSec = 'Boots'
+                elif jCatSec == 'Lighted Shoes':
+                    jCatSec = 'Lighted Shoes'
+                secondCategoryID = int(CatName.index(jCatSec))
+                secondCategory = CatId[secondCategoryID]
+
+                # Create a product request body
+                if jCatSecAr in CatNameAr:
+                    seoNameAr = CatNameAr[CatNameAr.index(
+                        jCatSecAr)] + ' / ' + nameAr
+                else:
+                    seoNameAr = nameAr
+                seoName = jCatSec + ' / ' + name
+
+                body = {
+                    "sku": sku,
+                    "unlimited": true,
+                    "inStovalue": true,
+                    "name": name,
+                    "nameTranslated": {
+                        "ar": nameAr,
+                        "en": name
+                    },
+                    "price": price,
+                    "enabled": true,
+                    "productClassId": 36100251,
+                    "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
+                    "descriptionTranslated": {
+                        "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
+                        "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
+                    },
+                    "categoryIds": [jCatMain, secondCategory],
+                    "categories": [{"id": jCatMain,
+                                    "enabled": True}, {"id": secondCategory,
+                                                       "enabled": True}],
+                    "defaultCategoryId": jCatMain,
+                    "seoTitle": f'{seoName}',
+                    "seoTitleTranslated": {
+                        "ar": seoNameAr,
+                        "en": seoName
+                    },
+                    "seoDescription": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
+                    "seoDescriptionTranslated": {
+                        "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
+                        "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
+                    },
+                    "attributes": [
+                        {
+                            "id": 158400257,
+                            "name": "UPC",
+                            "nameTranslated": {
+                                "ar": "رمز المنتج العالمي",
+                                "en": "UPC"
+                            },
+                            "value": f"{sku}",
+                            "valueTranslated": {
+                                "ar": f"{sku}",
+                                "en": f"{sku}"
+                            },
+                            "show": "DESCR",
+                            "type": "UPC"
+                        },
+                        {
+                            "id": 158400258,
+                            "name": "Brand",
+                            "nameTranslated": {
+                                "ar": "ماركة",
+                                "en": "Brand"
+                            },
+                            "value": "Al Beyan Fashion™",
+                            "valueTranslated": {
+                                "ar": "Al Beyan Fashion™",
+                                "en": "Al Beyan Fashion™"
+                            },
+                            "show": "DESCR",
+                            "type": "BRAND"
+                        },
+                        {
+                            "id": 158400259,
+                            "name": "Gender",
+                            "nameTranslated": {
+                                "ar": "الجنس",
+                                "en": "Gender"
+                            },
+                            "value": f"{gender}",
+                            "valueTranslated": {
+                                "ar": f"{genderAr}",
+                                "en": f"{gender}"
+                            },
+                            "show": "DESCR",
+                            "type": "GENDER"
+                        },
+                        {
+                            "id": 158400260,
+                            "name": "Age group",
+                            "nameTranslated": {
+                                "ar": "الفئة العمرية",
+                                "en": "Age group"
+                            },
+                            "value": f"{age}",
+                            "valueTranslated": {
+                                "ar": f"{age}",
+                                "en": f"{age}"
+                            },
+                            "show": "DESCR",
+                            "type": "AGE_GROUP"
+                        },
+                        {
+                            "id": 158816769,
+                            "name": "Base",
+                            "nameTranslated": {
+                                "ar": "القاعدة",
+                                "en": "Base"
+                            },
+                            "value": f"{base}",
+                            "valueTranslated": {
+                                "ar": f"{baseAr}",
+                                "en": f"{base}"
+                            },
+                            "type": "CUSTOM",
+                            "show": "DESCR"
+                        },
+                        {
+                            "id": 158400261,
+                            "name": "Color",
+                            "nameTranslated": {
+                                "ar": "اللون",
+                                "en": "Color"
+                            },
+                            "value": f"{color}",
+                            "valueTranslated": {
+                                "ar": f"{colorAr}",
+                                "en": f"{color}"
+                            },
+                            "show": "DESCR",
+                            "type": "COLOR"
+                        },
+                        {
+                            "id": 158400262,
+                            "name": "Sizes",
+                            "nameTranslated": {
+                                "ar": "مقاسات",
+                                "en": "Sizes"
+                            },
+                            "value": f"{size}",
+                            "valueTranslated": {
+                                "ar": f"{size}",
+                                "en": f"{size}"
+                            },
+                            "show": "DESCR",
+                            "type": "SIZE"
+                        },
+                        {
+                            "id": 158400265,
+                            "name": "Pieces count",
+                            "nameTranslated": {
+                                "ar": "عدد القطع",
+                                "en": "Pieces count"
+                            },
+                            "value": f"{pcQty}",
+                            "valueTranslated": {
+                                "ar": f"{pcQty}",
+                                "en": f"{pcQty}"
+                            },
+                            "show": "PRICE",
+                            "type": "UNITS_IN_PRODUCT"
+                        },
+                        {
+                            "id": 158400266,
+                            "name": "Price per  piece",
+                            "nameTranslated": {
+                                "ar": "السعر للقطعة الواحدة",
+                                "en": "Price per  piece"
+                            },
+                            "value": f"{pcPrice}",
+                            "valueTranslated": {
+                                "ar": f"{pcPrice}",
+                                "en": f"{pcPrice}"
+                            },
+                            "show": "PRICE",
+                            "type": "PRICE_PER_UNIT"
+                        }
+                    ],
+                    "googleItemCondition": "NEW",
+                    "subtitle": "The displayed price is for the full set",
+                    "subtitleTranslated": {
+                        "ar": "السعر المعروض للسيري كامل",
+                        "en": "The displayed price is for the full set"
+                    },
+                    "googleProductCategory": 187,
+                    "googleProductCategoryName": "Apparel & Accessories > Shoes",
+                    "productCondition": "NEW"
+                }
+
+                # Parsing collected data
+                ResContent, resCode = poster(body)
+                # Feedback and returning response and media_path new values
+                if resCode == 200:
+                    # Created product ID
+                    if 'id' in ResContent:
+                        ItemId = ResContent['id']
+                        try:
+                            Main_name = f'media/{random.randint(30000, 90000000)}.jpg'
+                            with open(Main_name, 'wb') as Main_IMG:
+                                Main_IMG.write(requests.get(data['images'][0], headers={
+                                    "User-Agent": "Chrome/51.0.2704.103",
+                                }, stream=True).content)
+                            Main_IMG.close()
+                            Main_IMG = open(Main_name, 'rb').read()                            
+                            MainImgRes = requests.post(
+                                f'https://app.ecwid.com/api/v3/63690252/products/{ItemId}/image?token=secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7', data=Main_IMG, headers=eheaders)
+                            if MainImgRes.status_code == 200:
+                                logger.info(
+                                f'Main image upload is successful | Status code: {MainImgRes.status_code} | Reason: { MainImgRes.reason} | Image name: {Main_name}')
+                            elif MainImgRes.status_code == 422:
+                                logger.warning(f"Main image upload is not successful | Reason: {MainImgRes.content} | Status: {MainImgRes.status_code} | URL: {data['images'][0]}")
+
+                            del data['images'][0]
+
+                            for img in data['images']:
+                                file_name = f'media/{random.randint(300000, 90000000)}.jpg'
+                                with open(file_name, 'wb') as file:
+                                    file.write(requests.get(img, headers={
+                                        "User-Agent": "Chrome/51.0.2704.103",
+                                    }, stream=True).content)
+
+                                file.close()
+                                file = open(file_name, 'rb').read()
+                                gallery_upload = requests.post(
+                                    f'https://app.ecwid.com/api/v3/63690252/products/{ItemId}/gallery?token=secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7',
+                                    data=file,
+                                    headers=eheaders)
+                                if gallery_upload.status_code == 200:
+                                    logger.info(
+                                    f"Gallery image uploaded | Status code: {gallery_upload.status_code} | Reason: {gallery_upload.reason} | Filename: {file_name}"
+                                )
+                                elif gallery_upload.status_code == 422:
+                                    logger.warning(f"Main image upload is not successful | Reason: {gallery_upload.content} | Status: {gallery_upload.status_code} | URL: {img}")
+                        
+                        except Exception as e:
+                            logger.exception(e)
+
+                        Files = glob.glob('media/*')
+                        for file in Files:
+                            os.remove(file)
+                        logger.info(
+                            f"Product created successfully with ID: {ItemId} | SKU: {sku}"
+                        )
+                        continue
+                    else:
+                        logger.error(
+                            f"Product ID is empty?! | Response: {ResContent} | Sku: {sku}")
+                        continue
+
+                elif resCode == 400:
+                    logger.error(
+                        f"New product body request parameters are malformed | Sku: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
+                    )
+                    continue
+                elif resCode == 409:
+                    logger.warning(
+                        f"SKU_ALREADY_EXISTS: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
+                    )
+                    continue
+                else:
+                    logger.critical(
+                        f"Failed to create a new product")
+                    continue
 
         # Errors handling
         except IndexError as e:
             logger.exception(e)
-            return None
+            continue
 
         except KeyError as e:
             logger.exception(e)
-            return None
+            continue
 
         except ValueError as e:
             logger.exception(e)
-            return None
-
+            continue
 
 def poster(body):
 
@@ -241,9 +387,6 @@ def poster(body):
     return response, resCode
 
 # Uploads main image
-
-
-@celery.task()
 def UploadMainIMG(ItemId, Main, headers):
     MainImgData = open(Main, 'rb').read()
     MainImgRes = requests.post(
@@ -255,49 +398,6 @@ def UploadMainIMG(ItemId, Main, headers):
     )
 
 # Adding gallery images to the product
-
-
-@celery.task()
-def upload_media(ItemId, media_path, Main):
-    media_path = media_check(media_path)
-    uploader(media_path, ItemId, Main)
-
-
-def media_check(media_path):
-    global GifFile, count, VidFile
-    VidTypes = ['video/mp4', 'video/avi', 'video/mkv', 'video/mpeg']
-    FileTypes = magic.Magic(mime=True)
-    for Ip in media_path[0]['image']:
-        FileType = FileTypes.from_file(Ip)
-        for Vi in VidTypes:
-            if Vi == FileType:
-                VidFile = Ip
-                vidToGif(count, Ip)
-                logger.info(
-                    f"Video file have been removed from the list | File name: {Ip} | Added GIF file | {GifFile}"
-                )
-                media_path[0]['image'].remove(VidFile)
-                media_path[0]['image'].append(GifFile)
-                count += 1
-                break
-    return media_path
-
-
-def vidToGif(count, Ip):
-    global GifFile
-    GifFile = f'media/animpic{str(count)}.gif'
-    Vid = VideoFileClip(Ip).subclip(0, 10).resize(0.5)
-    Vid.write_gif(GifFile, program='ffmpeg', fps=24)
-    Vid.close()
-    size = round(os.path.getsize(GifFile) / 1024**2)
-    if size >= 20:
-        Vid = VideoFileClip(Ip).subclip(0, 10).resize(0.5)
-        Vid.write_gif(GifFile, program='ffmpeg', fps=15)
-        Vid.close()
-    logger.info(f"New gif file have been created | File name: {GifFile}")
-    return GifFile
-
-
 def uploader(media_path, ItemId, Main):
     global GifFile
     if GifFile:
@@ -305,7 +405,6 @@ def uploader(media_path, ItemId, Main):
     for img in media_path[0]['image']:
         if img is not None and img != Main:
             upload(ItemId, img)
-
 
 def upload(ItemId, img):
     ImgFile = open(img, 'rb').read()
@@ -318,20 +417,35 @@ def upload(ItemId, img):
     )
     os.remove(os.path.abspath(img))
 
+def category_maker(main, sub):
+    url = "https://app.ecwid.com/api/v3/63690252/categories?token=secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7"
+    headers = {
+        'Content-Type': 'application/json;charset=utf-8'
+    }
+    ts = GoogleTranslator(source="tr", target="en")
+    ts2 = GoogleTranslator(source="en", target="ar")
+    category_list = check_category()
+    sub_name = ts.translate(sub.text.strip())
+    
+    if sub_name not in category_list['nameEn']:
+        main_id = category_list['id'][category_list['nameEn'].index(main)]
+        payload = {
+            "parentId": main_id,
+            "name": f"{sub_name}",
+            "description": "",
+            "enabled": True,
+            "orderBy": 10,
+            "nameTranslated": {
+                    "ar": f"{ts2.translate(sub_name)}",
+                    "en": f"{sub_name}"
+            }
+        }
+        payload = json.dumps(payload)
+        response = requests.request("POST", url, headers=headers, data=payload)
 
-@celery.task()
-def incoming_message_processor(reqResponse):
-    if reqResponse:
-        reqResponse = telegram.Update.de_json(reqResponse, bot)
-        if reqResponse.message:
-            ContentMessage = reqResponse.message
-        elif reqResponse.channel_post:
-            ContentMessage = reqResponse.channel_post
-        elif reqResponse.effective_message:
-            ContentMessage = reqResponse.effective_message
-        if ContentMessage:
-            return ContentMessage
-
+        print(response.text)
+    else:
+        print('Sub exists')
 
 def clearMediaList(*args, clear=bool, files=bool):
     Files = glob.glob('media/*')
@@ -369,64 +483,9 @@ def clearMediaList(*args, clear=bool, files=bool):
         f"Media list is cleared | Media List: {args} "
     )
 
-
-def media_download(filePath, fileName):
-    # Downloading file and saving to the media folder
-    file_name = filePath.download(f'media/{fileName}')
-    return file_name
-
-# Downloads media files
-@celery.task()
-def media_downloader(fid):
-    """_summary_
-
-        Args:
-            media (photo/video): message media file
-            bot (client): telegram bot instance
-
-        Returns:
-            file_name: Takes message media file and save it locally, then returns new file name as a refrense
-        """
-
-    # # # Checking media type
-    # bot1 = telegram.Update.de_json(bot1, bot)
-
-    try:
-        # Retrieving file path
-        filePath = bot.getFile(fid)
-        filePath1 = filePath.file_path
-
-        # Extracting file name
-        fileName = re.sub("\w+\W*[^file_\d+.\w]", '', filePath1)
-
-        # Removing extra text
-        fileName = fileName.replace('api.telegram.', '')
-        file_name = media_download(filePath, fileName)
-        logger.info(
-            f"Media file download is successful | Status code: 200 | Path: {file_name}"
-        )
-    except telegram.error.BadRequest as e:
-        if re.match('File is too big', e):
-            logger.warning(
-                f'File with  ID {fid} contains a big file and will not be downloaded!'
-            )
-            return
-    # file_name = json.dumps(file_name)
-    return file_name
-
-
-@celery.task()
-def DownloadCallback(*args):
-    logger.info(f'Result: {args[0]}')
-    return args[0]
-
-
-@celery.task()
-def NewProductCallback(*args):
-    logger.info(f'Results count: {len(args)}')
-    return args[0][0]
-
-
-@celery.task()
-def dummy(self, *args, **kwargs):
-    pass
+async def clear_all(media_path):
+    media_path['image'].clear()
+    media_path['grouped_id'].clear()
+    Files = glob.glob('media/*')
+    for file in Files:
+        os.remove(file)

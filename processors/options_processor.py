@@ -2,7 +2,7 @@ import logging
 from logging import config
 import re
 
-from app.app import log_config
+from config.logger import log_config
 
 config.dictConfig(log_config)
 logger = logging.getLogger('mainLog')
