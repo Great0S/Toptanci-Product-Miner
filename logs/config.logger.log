@@ -113,3 +113,660 @@
 [2022-12-24 01:19:21,563:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
 [2022-12-24 01:19:22,536:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
 [2022-12-24 01:19:22,763:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:36:12,622:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 10:36:13,234:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 10:36:15,296:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:36:15,558:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:36:18,415:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:36:19,076:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:37:19,383:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 10:37:19,403:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 10:37:20,087:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:37:20,313:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:37:21,179:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:37:21,408:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:38:59,573:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 10:38:59,591:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 10:39:00,922:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:39:01,059:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:39:01,156:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:39:01,431:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:39:02,653:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:39:03,138:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:39:03,596:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:39:56,610:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 10:39:56,627:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 10:39:57,376:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:39:57,664:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:39:58,589:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:39:58,816:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:46:00,410:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 10:46:00,431:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 10:46:01,216:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:46:01,446:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:46:01,773:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 10:46:01,980:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 10:46:02,569:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:46:02,794:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 10:46:02,801:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 10:46:03,044:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:16:59,716:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:16:59,735:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:17:00,823:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:17:01,062:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:17:01,951:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:17:02,188:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:17:35,897:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:17:35,915:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:17:36,851:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:17:37,003:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:17:37,153:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:17:37,291:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:17:38,107:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:17:38,286:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:17:38,352:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:17:38,512:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:18:44,346:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:18:44,366:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:18:45,200:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:18:45,453:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:18:45,897:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:18:46,088:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:18:46,538:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:18:46,701:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:18:46,779:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:18:46,905:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:19:07,984:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:19:07,986:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:19:08,974:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:19:09,203:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:19:09,509:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:19:09,716:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:19:10,291:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:19:10,494:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:19:10,545:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:19:10,705:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:20:54,971:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:20:54,991:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:20:56,726:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:20:56,953:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:20:56,953:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:20:57,149:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:20:58,001:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:20:58,245:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:20:58,268:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:20:58,492:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:21:30,713:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:21:30,733:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:21:31,890:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:21:32,002:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:21:32,330:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:21:32,389:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:21:33,433:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:21:33,448:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:21:33,670:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:21:33,720:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:23:28,683:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:23:28,701:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:23:29,486:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:23:29,672:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:23:29,729:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:23:29,938:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:23:30,810:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:23:30,961:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:23:31,044:INFO:mainLog:Thread-7 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:23:31,214:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:24:20,484:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:24:20,485:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:24:21,092:INFO:mainLog:Thread-2 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:24:21,196:INFO:mainLog:Thread-2 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:24:21,196:INFO:mainLog:Thread-1 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:24:21,287:INFO:mainLog:Thread-1 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:24:21,894:INFO:mainLog:Thread-2 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:24:22,013:INFO:mainLog:Thread-1 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:24:22,149:INFO:mainLog:Thread-2 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:24:22,250:INFO:mainLog:Thread-1 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:24:22,833:INFO:mainLog:Thread-1 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:24:22,848:INFO:mainLog:Thread-1 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:24:22,925:INFO:mainLog:Thread-2 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:24:22,931:INFO:mainLog:Thread-2 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:24:39,875:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:24:39,894:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:24:41,294:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:24:41,577:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:24:42,436:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:24:42,665:INFO:mainLog:Thread-8 (ulusoyScraper)] Retrieving products list size please wait!
+[2022-12-24 11:36:43,361:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:36:43,391:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:36:44,243:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:36:44,475:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:36:45,324:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:39:10,944:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:39:10,962:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:39:11,740:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:39:11,955:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:39:11,970:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:39:12,175:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:39:13,039:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:39:13,236:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:39:13,922:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:39:13,922:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:39:50,407:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:39:50,427:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:40:09,234:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:40:09,505:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:40:10,383:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:40:25,603:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:40:25,621:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:40:26,904:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:40:27,128:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:40:27,423:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:46:59,233:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:46:59,251:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:47:00,103:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:47:00,312:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:47:01,172:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:47:02,034:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:47:02,034:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:48:04,651:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:48:04,669:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:48:05,432:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:48:05,621:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:48:05,676:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:48:05,898:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:48:06,762:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:48:06,964:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:48:07,760:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:48:07,760:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:48:07,929:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:48:07,929:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:48:48,040:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:48:48,058:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:48:49,005:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:48:49,230:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:48:50,086:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:48:51,009:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:48:51,009:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:49:29,154:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:49:29,187:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:49:29,843:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:49:30,067:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:49:30,083:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:49:30,288:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:49:31,268:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:49:31,443:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:49:32,130:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:49:32,134:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:49:32,371:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:49:32,371:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:52:40,826:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:52:40,830:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:52:41,763:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:52:42,005:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:52:42,293:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:52:42,494:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:52:43,100:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:52:43,259:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:52:43,992:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:52:43,992:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:52:44,182:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:52:44,182:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:54:42,869:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:54:42,891:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:54:43,526:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:54:43,754:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:54:44,441:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:54:44,644:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:54:44,664:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:54:44,910:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:54:45,935:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:54:45,951:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:54:46,139:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:54:46,139:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:58:14,228:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:58:14,248:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:58:14,564:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 403
+[2022-12-24 11:58:42,940:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 11:58:42,959:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 11:58:43,717:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:58:43,940:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:58:43,940:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 11:58:44,157:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 11:58:45,049:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:58:45,053:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:58:45,057:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 11:58:45,253:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 11:58:45,260:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 11:58:45,265:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:01:55,523:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:01:55,543:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:01:57,415:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:01:57,663:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:01:58,593:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:01:58,593:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:01:58,609:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:03:22,608:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:03:22,628:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:03:23,531:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:03:23,740:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:03:23,740:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:03:23,949:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:03:24,849:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:03:24,855:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:03:24,860:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:03:25,040:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:03:25,055:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:03:25,067:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:04:40,158:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:04:40,178:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:04:40,883:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:04:41,165:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:04:41,190:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:04:41,394:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:04:42,259:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:04:42,265:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:04:42,270:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:04:42,449:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:04:42,449:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:04:42,462:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:07:20,380:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:07:20,398:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:07:21,478:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:07:21,611:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:07:21,727:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:07:21,965:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:07:22,792:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:07:22,814:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:07:22,818:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:07:23,053:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:07:23,065:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:07:23,069:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:14:10,978:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:14:10,998:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:14:11,937:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:14:12,231:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:14:13,059:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:14:13,059:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:14:13,076:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:14:38,343:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:14:38,362:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:14:39,195:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:14:39,236:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:14:39,663:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:14:39,664:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:14:40,520:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:14:40,520:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:14:40,535:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:14:40,549:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:14:40,554:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:14:40,558:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:15:25,743:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:15:25,759:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:15:26,562:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:15:26,654:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:15:26,912:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:15:27,013:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:15:27,879:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:15:27,879:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:15:27,893:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:15:28,050:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:15:28,050:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:15:28,106:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:17:58,272:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:17:58,289:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:17:59,068:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:17:59,304:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:17:59,304:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:17:59,497:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:18:00,374:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:18:00,374:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:18:00,387:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:18:00,531:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:18:00,531:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:18:00,541:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:19:42,387:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:19:42,405:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:19:43,359:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:19:43,601:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:19:44,452:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:19:44,452:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:19:44,468:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:20:27,361:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:20:27,380:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:20:28,127:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:20:28,278:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:20:28,380:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:20:28,562:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:20:29,417:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:20:29,417:INFO:mainLog:Thread-8 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:20:29,427:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:20:29,585:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:20:29,632:INFO:mainLog:Thread-7 (ulusoyScraper)] Products data scraping start
+[2022-12-24 12:20:29,636:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:22:05,909:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:22:05,927:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:22:06,675:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:22:06,895:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:22:06,910:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:22:07,109:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:22:08,033:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:22:08,037:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:22:08,270:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:22:08,286:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:23:43,965:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:23:43,984:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 12:23:44,888:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:23:44,928:INFO:mainLog:Thread-7 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-24 12:23:45,317:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:23:45,335:INFO:mainLog:Thread-7 (ulusoyScraper)] Categories found count: 8
+[2022-12-24 12:23:46,215:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:23:46,215:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:23:46,237:INFO:mainLog:Thread-7 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-24 12:23:46,245:INFO:mainLog:Thread-7 (ulusoyScraper)] Pulling products links
+[2022-12-24 12:24:49,003:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:24:49,843:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 12:24:50,034:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 12:24:51,165:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-24 12:24:51,180:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:25:49,056:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:25:49,854:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 12:25:50,087:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 12:25:51,499:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-24 12:25:51,506:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:30:17,213:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:35:27,255:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:36:31,721:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:36:35,264:INFO:mainLog:MainThread] New page request has been made | Response: 403
+[2022-12-24 12:37:02,972:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 12:37:04,217:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 12:37:04,428:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 12:37:05,528:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-24 12:37:05,528:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:39:15,323:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-24 12:39:15,328:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:40:06,787:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-24 12:40:06,792:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:40:30,343:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-24 12:40:30,343:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:40:59,670:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-24 12:40:59,670:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:42:05,542:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-24 12:42:05,573:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:42:09,742:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-24 12:42:09,742:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 12:42:17,947:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-24 12:42:17,962:INFO:mainLog:MainThread] Pulling products links
+[2022-12-24 14:40:39,000:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 14:40:39,932:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 14:40:40,160:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 14:44:17,656:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 14:44:18,495:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 14:44:18,732:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:04:05,283:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:04:06,118:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:04:06,362:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:07:14,764:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:07:16,504:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:07:16,756:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:07:43,897:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:07:44,742:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:07:44,980:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:09:06,985:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:09:07,804:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:09:08,032:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:11:27,221:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:11:28,652:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:11:28,878:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:21:14,265:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:21:28,767:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:21:39,181:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:21:40,763:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:21:41,058:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:23:54,791:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:23:55,613:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:23:55,897:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:27:14,557:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:27:15,598:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:27:15,885:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:52:03,821:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:52:05,093:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:52:05,381:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:53:22,175:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 15:53:23,506:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 15:53:23,792:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 15:53:44,765:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:07:40,984:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:08:10,324:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:11:46,636:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:11:46,742:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 16:11:47,530:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 16:11:47,783:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 16:13:23,440:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:13:23,546:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 16:13:24,320:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 16:13:24,584:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 16:16:36,534:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:16:36,570:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 16:16:37,410:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 16:16:37,822:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 16:18:24,167:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:18:24,196:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-24 16:22:45,771:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:23:51,546:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:29:20,536:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:30:02,012:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:31:33,303:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:35:56,785:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-24 16:35:58,194:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-24 16:35:58,528:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-24 16:35:58,798:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-24 16:35:58,809:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:38:55,478:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:38:58,362:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:38:58,657:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:38:59,883:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:38:59,898:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:41:51,374:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:41:52,837:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:41:53,091:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:41:53,677:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:41:53,681:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:42:35,438:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:45:02,473:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:45:02,677:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-25 23:45:03,687:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-25 23:45:03,810:INFO:mainLog:Thread-10 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-25 23:45:04,000:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-25 23:45:04,162:INFO:mainLog:Thread-10 (ulusoyScraper)] Categories found count: 8
+[2022-12-25 23:45:04,758:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-25 23:45:04,763:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-25 23:45:50,859:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:45:51,070:INFO:mainLog:MainThread] Tasks executed in {elapsed:0.2f} seconds.
+[2022-12-25 23:45:52,142:INFO:mainLog:Thread-10 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-25 23:45:52,392:INFO:mainLog:Thread-10 (ulusoyScraper)] Categories found count: 8
+[2022-12-25 23:45:52,565:INFO:mainLog:Thread-8 (ulusoyScraper)] New page request has been made | Response: 200
+[2022-12-25 23:45:52,807:INFO:mainLog:Thread-8 (ulusoyScraper)] Categories found count: 8
+[2022-12-25 23:45:53,788:INFO:mainLog:Thread-8 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-25 23:45:53,792:INFO:mainLog:Thread-8 (ulusoyScraper)] Pulling products links
+[2022-12-25 23:45:54,206:INFO:mainLog:Thread-10 (ulusoyScraper)] Category being processed: Bijouterie
+[2022-12-25 23:45:54,246:INFO:mainLog:Thread-10 (ulusoyScraper)] Pulling products links
+[2022-12-25 23:46:56,544:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:46:58,083:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:46:58,366:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:46:59,099:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:46:59,115:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:51:18,846:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:51:20,755:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:51:21,049:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:52:18,872:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:53:49,644:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:54:08,850:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:54:10,685:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:54:11,023:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:54:11,690:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:54:11,710:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:57:15,797:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:57:17,321:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:57:17,611:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:57:18,643:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:57:18,663:INFO:mainLog:MainThread] Pulling products links
+[2022-12-25 23:58:50,745:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-25 23:58:52,261:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-25 23:58:52,559:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-25 23:58:53,428:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-25 23:58:53,449:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:01:43,039:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:01:44,522:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:01:44,816:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:01:45,153:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:01:45,173:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:05:56,885:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:06:33,578:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:06:33,870:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:06:34,430:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:06:34,448:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:09:33,870:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:09:35,142:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:09:35,442:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:09:36,388:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:09:36,406:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:15:50,021:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:17:06,403:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:18:35,196:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:19:16,783:INFO:mainLog:MainThread] New page request has been made | Response: 520
+[2022-12-26 00:19:57,547:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:19:58,705:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:19:58,990:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:19:59,742:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:19:59,762:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:20:46,654:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:20:49,468:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:20:49,770:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:20:50,063:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:20:50,098:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:22:03,303:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:22:05,537:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:22:05,836:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:22:06,371:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:22:06,405:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:23:34,357:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:24:27,632:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:24:28,906:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:24:29,196:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:24:29,869:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:24:29,886:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:26:57,220:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:26:58,730:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:26:59,022:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:26:59,532:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:26:59,549:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:28:19,827:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:28:22,057:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:28:22,351:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:28:23,071:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:28:23,088:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:30:20,531:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:30:21,902:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:30:22,194:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:30:22,578:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:30:22,595:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:35:35,722:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:35:37,472:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:35:37,773:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:35:38,580:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:35:38,612:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:38:57,053:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:39:16,198:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:39:16,474:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:39:17,195:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:39:17,212:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:41:59,720:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:42:00,987:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:42:01,318:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:42:02,928:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:42:02,947:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:44:02,299:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:44:04,948:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:44:05,245:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:44:05,991:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:44:06,006:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:44:26,243:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:44:28,156:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:44:28,464:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:44:29,490:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:44:29,506:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:46:17,544:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:46:19,809:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:46:20,110:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:46:20,533:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:46:20,552:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:50:12,856:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:50:14,337:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:50:14,635:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:50:15,926:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:50:15,943:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:51:18,353:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:51:19,810:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:51:20,127:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:51:21,055:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:51:21,075:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:53:11,663:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:53:13,318:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:53:13,602:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:53:14,384:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:53:14,402:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:54:41,335:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:54:42,791:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:54:43,089:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:54:43,541:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:54:43,557:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:56:02,075:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:56:03,311:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:56:03,616:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:56:04,064:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:56:04,077:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 00:59:47,129:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 00:59:48,976:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 00:59:49,255:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 00:59:49,579:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 00:59:49,591:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:01:18,286:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 01:01:20,091:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 01:01:20,369:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 01:01:20,962:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 01:01:20,974:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:05:55,260:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 01:05:57,501:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 01:05:57,814:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 01:05:58,278:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 01:05:58,300:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:07:52,831:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 01:07:54,460:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 01:07:54,756:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 01:07:55,833:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 01:07:55,833:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:08:44,274:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 01:08:45,670:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 01:08:45,960:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 01:08:46,547:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 01:08:46,559:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:09:49,003:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 01:09:50,492:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 01:09:50,784:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 01:09:51,272:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 01:09:51,272:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:11:14,496:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 01:11:14,497:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:08,771:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 01:12:08,783:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:16,039:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 01:12:16,059:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:27,904:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 01:12:27,915:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:37,666:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 01:12:37,678:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:43,645:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 01:12:43,656:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:12:54,284:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 01:12:54,297:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 01:13:24,332:INFO:mainLog:MainThread] Pulled products links total: 1
