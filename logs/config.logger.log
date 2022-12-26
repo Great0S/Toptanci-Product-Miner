@@ -770,3 +770,437 @@
 [2022-12-26 01:12:54,284:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
 [2022-12-26 01:12:54,297:INFO:mainLog:MainThread] Pulling products links
 [2022-12-26 01:13:24,332:INFO:mainLog:MainThread] Pulled products links total: 1
+[2022-12-26 15:13:47,507:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 15:13:48,635:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 15:13:48,893:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 15:13:50,004:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 15:13:50,017:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:14:45,951:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 15:14:45,960:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:16,944:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 15:15:16,973:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:21,107:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 15:15:21,129:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:29,214:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 15:15:29,223:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:34,824:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 15:15:34,835:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:40,096:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 15:15:40,166:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:15:48,662:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 15:15:48,671:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:26:09,459:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 15:26:10,416:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 15:26:10,667:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 15:26:10,940:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 15:26:10,950:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:10,552:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 15:27:10,562:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:35,426:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 15:27:35,455:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:38,501:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 15:27:38,517:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:45,265:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 15:27:45,280:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:50,808:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 15:27:50,820:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:53,893:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 15:27:53,916:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:27:59,277:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 15:27:59,296:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 15:28:48,025:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 15:28:48,036:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:03:10,923:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:03:11,915:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:03:12,182:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:03:12,428:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:03:12,443:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:05,765:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:04:05,775:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:36,804:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:04:36,813:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:40,311:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:04:40,327:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:48,264:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:04:48,273:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:54,073:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:04:54,100:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:04:57,608:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:04:57,622:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:05:04,374:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:05:04,390:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:05:09,571:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:05:09,582:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:06:30,933:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:06:31,811:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:06:32,075:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:06:32,311:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:06:32,330:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:07:21,296:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:07:21,310:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:07:47,628:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:07:47,637:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:07:51,443:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:07:51,456:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:07:58,024:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:07:58,056:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:08:03,520:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:08:03,528:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:08:05,931:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:08:05,940:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:08:11,722:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:08:11,739:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:08:17,452:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:08:17,463:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:10:29,882:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:10:30,557:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:10:30,836:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:10:31,058:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:10:31,070:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:11:17,801:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:11:17,830:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:11:42,703:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:11:42,718:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:11:45,916:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:11:45,939:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:11:53,599:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:11:53,613:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:11:59,454:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:11:59,470:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:12:01,994:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:12:02,003:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:12:07,735:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:12:07,745:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:12:12,402:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:12:12,412:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:12:56,816:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:12:57,709:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:12:57,986:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:12:58,217:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:12:58,227:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:13:44,460:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:13:44,482:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:09,480:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:14:09,489:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:12,894:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:14:12,961:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:19,566:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:14:19,580:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:25,211:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:14:25,225:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:27,746:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:14:27,760:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:33,878:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:14:33,911:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:14:39,123:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:14:39,133:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:18:48,655:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:18:49,567:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:18:49,854:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:18:50,087:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:18:50,095:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:19:06,561:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:19:07,957:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:19:08,229:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:19:08,466:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:19:08,475:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:19:52,766:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:19:52,788:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:17,937:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:20:17,948:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:21,144:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:20:21,153:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:27,478:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:20:27,495:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:32,801:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:20:32,810:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:35,396:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:20:35,412:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:43,316:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:20:43,329:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:20:48,442:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:20:48,453:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:29:31,350:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:29:32,013:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:29:32,275:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:29:32,534:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:29:32,546:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:30:18,588:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:30:18,619:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:30:43,640:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:30:43,647:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:30:47,342:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:30:47,360:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:30:53,530:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:30:53,544:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:30:58,085:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:30:58,098:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:31:00,767:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:31:00,778:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:31:06,480:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:31:06,495:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:31:12,222:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:31:12,231:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:37:37,549:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:37:38,342:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:37:38,625:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:37:38,897:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:37:38,906:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:38:25,672:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:38:25,692:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:38:52,284:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:38:52,297:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:38:55,885:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:38:55,894:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:39:02,723:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:39:02,733:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:39:07,797:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:39:07,812:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:39:10,446:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:39:10,461:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:39:16,380:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:39:16,396:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:39:21,355:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:39:21,367:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:41:37,978:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:41:38,802:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:41:39,079:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:41:39,327:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:41:39,337:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:42:29,379:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:42:29,388:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:42:55,246:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:42:55,278:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:42:59,062:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:42:59,075:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:43:06,260:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:43:06,271:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:43:11,594:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:43:11,613:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:43:14,317:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:43:14,326:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:43:20,787:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:43:20,800:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:43:26,628:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:43:26,639:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:46:32,614:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:46:33,726:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:46:33,997:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:46:34,240:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:46:34,249:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:47:25,004:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:47:25,022:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:47:51,299:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:47:51,313:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:47:55,210:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:47:55,224:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:48:02,533:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:48:02,543:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:48:07,150:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:48:07,161:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:48:09,601:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:48:09,617:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:48:15,559:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:48:15,568:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:48:21,298:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:48:21,308:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:48:50,270:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:48:51,538:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:48:51,814:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:48:52,055:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:48:52,065:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:49:41,496:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:49:41,509:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:09,324:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:50:09,332:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:12,556:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:50:12,592:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:19,817:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:50:19,833:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:24,730:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:50:24,743:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:27,417:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:50:27,428:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:34,225:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:50:34,238:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:50:40,435:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:50:40,446:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:52:38,448:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:52:39,296:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:52:39,551:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:52:39,784:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:52:39,794:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:53:24,715:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:53:24,729:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:53:51,167:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:53:51,185:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:53:54,968:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:53:54,984:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:54:02,225:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:54:02,235:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:54:06,546:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:54:06,556:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:54:09,817:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:54:09,828:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:54:15,590:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:54:15,628:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:54:20,526:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:54:20,536:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:55:31,544:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:55:32,555:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:55:32,815:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:55:33,078:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:55:33,090:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:56:21,969:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:56:21,981:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:56:49,707:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:56:49,716:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:56:53,392:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:56:53,416:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:57:00,202:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:57:00,232:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:57:05,287:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:57:05,298:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:57:08,056:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:57:08,066:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:57:14,421:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 16:57:14,430:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:57:20,981:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 16:57:20,992:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 16:58:04,671:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 16:58:06,374:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 16:58:06,632:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 16:58:06,855:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 16:58:06,864:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:05,994:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 16:59:06,010:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:33,342:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 16:59:33,352:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:37,754:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 16:59:37,768:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:45,884:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 16:59:45,896:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:53,273:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 16:59:53,287:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 16:59:56,043:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 16:59:56,056:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:00:03,046:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 17:00:03,062:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:00:08,920:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 17:00:08,931:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 17:12:04,886:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 17:12:05,923:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 17:12:06,180:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 17:12:06,418:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 17:12:06,427:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:12:49,920:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 17:12:49,932:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:14,853:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 17:13:14,862:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:20,184:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 17:13:20,198:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:27,632:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 17:13:27,647:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:33,746:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 17:13:33,761:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:36,587:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 17:13:36,603:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:42,607:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 17:13:42,630:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 17:13:47,531:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 17:13:47,540:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 18:58:05,372:INFO:mainLog:Thread-7 (dump_categories)] Category dump is successfull
+[2022-12-26 18:58:57,992:INFO:mainLog:Thread-8 (dump_categories)] Category dump is successfull
+[2022-12-26 19:11:22,062:INFO:mainLog:Thread-7 (dump_categories)] Category dump is successfull
+[2022-12-26 19:13:06,061:INFO:mainLog:Thread-7 (dump_categories)] Category dump is successfull
+[2022-12-26 19:13:52,282:INFO:mainLog:Thread-8 (dump_categories)] Category dump is successfull
+[2022-12-26 19:17:02,165:INFO:mainLog:Thread-7 (dump_categories)] Category dump is successfull
+[2022-12-26 20:33:24,486:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 20:33:25,472:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 20:33:25,747:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 20:33:25,970:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 20:33:25,984:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:09,564:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 20:34:09,574:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:32,597:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 20:34:32,613:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:36,657:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 20:34:36,676:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:43,613:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 20:34:43,628:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:48,467:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 20:34:48,479:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:51,105:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 20:34:51,121:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:34:56,364:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 20:34:56,378:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 20:35:01,359:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 20:35:01,370:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 21:54:58,259:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 21:54:59,447:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 21:54:59,760:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 21:55:00,508:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 21:55:00,525:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:55:54,189:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-26 21:55:54,196:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:25,147:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-26 21:56:25,170:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:28,610:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-26 21:56:28,615:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:35,907:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-26 21:56:35,924:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:43,628:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-26 21:56:43,658:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:48,312:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-26 21:56:48,328:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:56:56,391:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-26 21:56:56,410:INFO:mainLog:MainThread] Pulling products links
+[2022-12-26 21:57:03,259:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-26 21:57:03,269:INFO:mainLog:MainThread] Processing products start
+[2022-12-26 21:59:21,406:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-26 21:59:22,678:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-26 21:59:22,960:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-26 21:59:23,202:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-26 21:59:23,215:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:27:30,470:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 00:27:31,294:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 00:27:31,580:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 00:27:31,827:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 00:27:31,836:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:28:39,039:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 00:28:39,054:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:18,776:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 00:29:18,785:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:23,008:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 00:29:23,023:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:33,371:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 00:29:33,383:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:41,198:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 00:29:41,226:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:44,856:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 00:29:44,888:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:29:53,414:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 00:29:53,428:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:30:00,284:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 00:30:00,297:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 00:34:11,358:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 00:34:11,964:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 00:34:12,213:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 00:34:12,432:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 00:34:12,433:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:34:58,238:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 00:34:58,247:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:24,554:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 00:35:24,570:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:28,289:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 00:35:28,298:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:35,206:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 00:35:35,219:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:41,790:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 00:35:41,810:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:45,242:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 00:35:45,252:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:50,804:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 00:35:50,822:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 00:35:56,642:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 00:35:56,652:INFO:mainLog:MainThread] Processing products start

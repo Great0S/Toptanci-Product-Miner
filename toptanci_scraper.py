@@ -15,7 +15,9 @@ from app.tasks import ts
 config.dictConfig(log_config)
 logger = logging.getLogger('mainLog')
 
-products_link = []
+products_link = {"Bijouterie": [], "Accessory": [], "Cosmetic": [], "Souvenir": [], "party material": [
+], "Textile": [], "Natural Stone & Jewelry Materials": [], "Packaging & Showcase Aks.": []}
+products = []
 URL = 'https://toptanci.com/'
 colors = list(map(str, webcolors.CSS3_NAMES_TO_HEX.keys()))
 headers = {
@@ -33,7 +35,6 @@ def ulusoyScraper():
         task1 = progress.add_task("[red]Categories...")
         task2 = progress.add_task("[green]Sub-Categories...")
         task3 = progress.add_task("[cyan]Pages...")
-       
 
         session = requests.Session()
         session.headers = headers
@@ -46,149 +47,112 @@ def ulusoyScraper():
         page_element = navBar.find_all("li", class_='darken-onshow')
         page_element_count = len(page_element)
         logger.info(f'Categories found count: {len(page_element)}')
-        element_data = []
+        main_count = 0
 
         for element in progress.track(page_element, task_id=0, total=page_element_count):
-                # Category's Title and ID
-                main_element = element.find('a', class_='nav-link')
-                element_title = ts.translate((main_element.text).strip())
-                sub_element = element.find('div', class_='list-group')
-                sub_categories = sub_element.find_all('a')
-                sub_categories_count = len(sub_categories)
+            # Category's Title and ID
+            main_element = element.find('a', class_='nav-link')
+            element_title = ts.translate((main_element.text).strip())
+            sub_element = element.find('div', class_='list-group')
+            sub_categories = sub_element.find_all('a')
+            sub_categories_count = len(sub_categories)
 
-                logger.info(f'Category being processed: {element_title}')
-                logger.info(f'Pulling products links')
-                sub_data = []
+            logger.info(f'Category being processed: {element_title}')
+            logger.info(f'Pulling products links')
+            sub_data = []
 
-                # progress.start_task(0)
-                # progress.update(task1, advance=1)
+            for sub in progress.track(sub_categories, task_id=1, total=sub_categories_count):
+                sub_link = URL+sub.attrs['href']
+                sub_name = ts.translate((sub.text).strip())
+                ListResponse = session.get(sub_link, headers=headers)
+                sub_soup = BeautifulSoup(
+                    ListResponse.content, "html.parser")
+                sub_result = sub_soup.find('body')
+                elemen_page_nav_count = int(sub_result.find(
+                    'div', class_='paging').attrs['data-pagecount'])
+                links = []
 
-                for sub in progress.track(sub_categories, task_id=1, total=sub_categories_count):
-                    sub_link = URL+sub.attrs['href']
-                    sub_name = ts.translate((sub.text).strip())
-                    ListResponse = session.get(sub_link, headers=headers)
-                    sub_soup = BeautifulSoup(
-                        ListResponse.content, "html.parser")
-                    sub_result = sub_soup.find('body')
-                    elemen_page_nav_count = int(sub_result.find(
-                        'div', class_='paging').attrs['data-pagecount'])
-                    links = []
+                for offset in progress.track(range(1, elemen_page_nav_count+1, 1), task_id=2, total=elemen_page_nav_count):
+                    try:
+                        ProductListResponse = session.get(
+                            f'{sub_link}?sayfa={offset}', headers=headers)
+                    except Exception as e:
+                        logger.warning(
+                            f'Request is not successfull | Status: {ProductListResponse.status_code} | Reason: {ProductListResponse.reason} | Error: {e}')
+                        continue
+                    element_sub_soup = BeautifulSoup(
+                        ProductListResponse.content, "html.parser")
+                    element_sub_result = element_sub_soup.find('body')
+                    element_sub = element_sub_result.find(
+                        class_='col-md-10 col-12')
+                    element_sub_links = element_sub.contents[7].find_all(
+                        "div", class_='productCard')
+                    element_sub_links_count = len(element_sub_links)
 
-                    # progress.start_task(1)
-                    # progress.update(task2, advance=1)
+                    for sub_links in element_sub_links:
+                        sub_links = URL + \
+                            re.sub(
+                                '/', '', sub_links.contents[1].attrs['href'])
+                        links.append(sub_links)
+                main_count += len(links)
+                sub_data.append({f"{sub_name}": links})
 
-                    for offset in progress.track(range(1, elemen_page_nav_count+1, 1), task_id=2, total=elemen_page_nav_count):
-                        try:
-                            ProductListResponse = session.get(
-                                f'{sub_link}?sayfa={offset}', headers=headers)
-                        except Exception as e:
-                            logger.warning(
-                                f'Request is not successfull | Status: {ProductListResponse.status_code} | Reason: {ProductListResponse.reason} | Error: {e}')
-                            continue
-                        element_sub_soup = BeautifulSoup(
-                            ProductListResponse.content, "html.parser")
-                        element_sub_result = element_sub_soup.find('body')
-                        element_sub = element_sub_result.find(
-                            class_='col-md-10 col-12')
-                        element_sub_links = element_sub.contents[7].find_all(
-                            "div", class_='productCard')
-                        element_sub_links_count = len(element_sub_links)
-
-                        for sub_links in element_sub_links:
-                            sub_links = URL + \
-                                re.sub(
-                                    '/', '', sub_links.contents[1].attrs['href'])
-                            links.append(sub_links)
-
-                    sub_data.append({f"{sub_name}": links})
-
-                element_data.append({f"{element_title}": sub_data})
-
-        products_link.append(element_data)
+            products_link[element_title].append(sub_data)
 
         logger.info(f'Pulled products links total: {len(products_link)}')
         logger.info(f'Processing products start')
-        
-        task4 = progress.add_task("[cyan]Items links...")
-        
-        for product in progress.track(products_link):
-                try:
-                    product_link = s.get(product)
-                    product_soup = BeautifulSoup(
-                        product_link.content, "html.parser")
-                except Exception as e:
-                    logger.error(
-                        f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason}")
-                    continue
-                sub_category = re.sub(r'\s\d+\s\-\s\d+\W+|\s\d+\s\-\s\d+|\b\d+\-\d+\W+|\>', "", product_soup.find(
-                    'div', class_='proCategoryTitle categoryTitleText').contents[1].contents[4].text).strip()
-                product_code = re.sub("mpn:", "", product_soup.find(
-                    id="divUrunKodu").attrs['content'])
-                product_name = ts.translate(re.sub("\n|\d+|\-", "", product_soup.find(
-                    class_="ProductName").contents[1].contents[1].string)).strip()
-                age_range = re.sub(r'\D+[^\d+\s\-\s\d+\b]', "", product_soup.find(
-                    'div', class_='proCategoryTitle categoryTitleText').contents[1].contents[4].text).strip()
-                product_qty = int(product_soup.find(
-                    "div", id="divToplamStokAdedi").contents[5].text)
-                product_price = int(
-                    re.sub('\₺|\,\d+', '', product_soup.find(class_="spanFiyat").text))
-                product_brand = re.sub('\n', '', product_soup.find(
-                    class_="right_line Marka").text)
-                try:
-                    product_sizes = re.sub('Asorti:', '', product_soup.find(
-                        id="divOzelAlan3").text).strip()
 
-                except Exception as e:
-                    product_sizes = 0
-                try:
-                    product_base = re.sub(
-                        r'Taban:|\n', '', product_soup.find(id="divOzelAlan4").text)
-                except Exception as e:
-                    product_base = "Normal"
-                try:
-                    product_colors = product_name.split()
-                    p_color = products_update = None
-                    for color in product_colors:
-                        color = color.lower()
-                        if p_color:
-                            if color in colors:
-                                p_color = f'{p_color} and {color}'
-                                p_color = p_color.capitalize()
-                        elif color in colors:
-                            p_color = color
-                            p_color = p_color.capitalize()
-                        elif color == 'ice':
-                            if p_color:
-                                p_color = f'{p_color} and white'
-                                p_color = p_color.capitalize()
+        task4 = progress.add_task("[purple]Scraping categories...")
+        task5 = progress.add_task("[cyan]Scraping sub-categories...")
+        task6 = progress.add_task("[cyan]Scraping Items...")
+
+        for product in progress.track(products_link, task_id=3, total=len(products_link)):
+            for dum, link in enumerate(products_link[product]):
+                for item in progress.track(link, task_id=4, total=len(link)):
+                    for item_name in item:
+                        for item_link in progress.track(item[item_name], task_id=5, total=len(item[item_name])):
+                            try:
+                                product_link = session.get(item_link)
+                                product_soup = BeautifulSoup(product_link.content, "html.parser")
+                            except Exception as e:
+                                logger.error(
+                                    f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason}")
+                                continue
+                            
+                            select_sub = product_soup.select('ol.breadcrumb.text-truncate')[0]
+                            select_sub2 = select_sub.select('li.breadcrumb-item')
+                            if len(select_sub2) == 4:
+                                sub_main_category = re.sub('\n','',select_sub2[2].text).strip()
                             else:
-                                p_color = 'white'
-                                p_color = p_color.capitalize()
-                    if p_color:
-                        pass
-                    else:
-                        p_color = "Not set"
-                except Exception or ValueError or AttributeError:
-                    p_color = "Not set"
-                CategoryID = None
-                if re.search('Men', element_title):
-                    CategoryID = 127508528
-                elif re.search('Women', element_title):
-                    CategoryID = 127508529
-                elif re.search('Kid', element_title):
-                    CategoryID = 136888060
-                elif re.search('Baby', element_title):
-                    CategoryID = 142990393
-                products_update = {"category_id": CategoryID, "category": element_title, "sub-category": sub_category, "code": product_code, "name": product_name, "images": [], "qty": product_qty,
-                                   "price": product_price, "brand": product_brand, "age": age_range, "sizes": product_sizes, "base": product_base, "color": p_color}
-                product_image = product_soup.find_all(
-                    "img", class_="cloudzoom-gallery")
-                for image in product_image:
-                    products_update['images'].append(
-                        URL + re.sub("en/", '', re.sub("thumb", "buyuk", image.attrs['src'])))
-                products[element_title].append(products_update)
+                                sub_main_category = None
+                            product_name = product_soup.find('div', class_='col-10').contents[1].text
+                            attrs_list = product_soup.select('table.table.table-hover.table-sm')
+                            atrributes = {"color": [], "price": [], "stock": [], "code": []}
+                            for attr in attrs_list:
+                                color_attr = attr.contents[1].contents[1].contents[3].text
+                                price_attr = re.sub(',','.',re.sub('\₺','',attr.contents[3].contents[1].contents[5].contents[0].text).strip())
+                                stock_attr = int(attr.contents[3].contents[1].contents[7].contents[0].text)
+                                code_attr = int(re.sub('\n','',attr.contents[3].contents[1].contents[1].contents[0].text))
 
-        logger.info(element_title)
+                                atrributes['color'].append(color_attr)
+                                atrributes['price'].append(price_attr)
+                                atrributes['stock'].append(stock_attr)
+                                atrributes['code'].append(code_attr)                            
+                            
+                            product_desc = re.sub(r'\w+;','',product_soup.select('div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip()
+                            product_images = product_soup.select('img.img-fluid.btnVariantSmallImage')
+                            images = {"color": [], "link": []}
+                            for image in product_images:
+                                img_link = image.attrs['data-src']
+                                img_color = image.attrs['alt']
+                                
+                                images['color'].append(img_link)
+                                images['link'].append(img_color)
+                            
+                            products_update = {"main_category": product, "sub-category": item_name, "sub-sub-category": sub_main_category, "name": product_name, "images": product_images, "descr": product_desc, "attrs": attrs_list}
+                            products[element_title].append(products_update)
+
+        
         logger.info("All data has been processed")
         return
 

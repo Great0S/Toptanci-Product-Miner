@@ -417,27 +417,26 @@ def upload(ItemId, img):
     )
     os.remove(os.path.abspath(img))
 
-def category_maker(main, sub):
+def category_maker(sub, sub_link_title, category_list):
     url = "https://app.ecwid.com/api/v3/63690252/categories?token=secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7"
     headers = {
         'Content-Type': 'application/json;charset=utf-8'
     }
     ts = GoogleTranslator(source="tr", target="en")
     ts2 = GoogleTranslator(source="en", target="ar")
-    category_list = check_category()
     sub_name = ts.translate(sub.text.strip())
     
-    if sub_name not in category_list['nameEn']:
-        main_id = category_list['id'][category_list['nameEn'].index(main)]
+    if sub_link_title not in category_list['nameEn']:
+        main_id = category_list['id'][category_list['nameEn'].index(sub_name)]
         payload = {
             "parentId": main_id,
-            "name": f"{sub_name}",
+            "name": f"{sub_link_title}",
             "description": "",
             "enabled": True,
             "orderBy": 10,
             "nameTranslated": {
-                    "ar": f"{ts2.translate(sub_name)}",
-                    "en": f"{sub_name}"
+                    "ar": f"{ts2.translate(sub_link_title)}",
+                    "en": f"{sub_link_title}"
             }
         }
         payload = json.dumps(payload)
