@@ -1204,3 +1204,434 @@
 [2022-12-27 00:35:50,822:INFO:mainLog:MainThread] Pulling products links
 [2022-12-27 00:35:56,642:INFO:mainLog:MainThread] Pulled products links total: 8
 [2022-12-27 00:35:56,652:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:13:35,496:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:13:37,685:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:13:37,949:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:13:38,987:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:13:38,998:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:14:38,121:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 10:14:38,136:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:05,566:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 10:15:05,586:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:09,180:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 10:15:09,188:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:17,152:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 10:15:17,152:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:25,635:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 10:15:25,635:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:32,237:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 10:15:32,253:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:42,634:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 10:15:42,650:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:15:51,945:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 10:15:51,955:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:18:42,425:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:18:43,251:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:18:43,476:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:18:43,730:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:18:43,740:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:19:28,289:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 10:19:28,304:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:19:51,304:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 10:19:51,318:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:19:54,569:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 10:19:54,589:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:20:00,719:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 10:20:00,735:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:20:05,835:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 10:20:05,845:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:20:08,115:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 10:20:08,138:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:20:13,373:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 10:20:13,383:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:20:18,427:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 10:20:18,439:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:21:16,893:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:21:18,220:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:21:18,468:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:21:18,711:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:21:18,723:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:00,748:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 10:22:00,768:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:25,583:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 10:22:25,599:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:28,828:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 10:22:28,844:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:35,505:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 10:22:35,521:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:40,750:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 10:22:40,767:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:43,043:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 10:22:43,053:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:48,040:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 10:22:48,052:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:22:53,051:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 10:22:53,061:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:26:02,246:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:26:03,231:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:26:03,471:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:26:03,702:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:26:03,711:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:26:46,302:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 10:26:46,310:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:10,848:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 10:27:10,858:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:13,990:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 10:27:14,000:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:20,603:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 10:27:20,613:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:25,112:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 10:27:25,122:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:27,868:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 10:27:27,878:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:32,375:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 10:27:32,384:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:27:38,055:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 10:27:38,066:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:42:42,526:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:42:43,388:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:42:43,647:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:42:43,904:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:42:43,917:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:43:29,151:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 10:43:29,808:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 10:43:30,061:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 10:43:30,303:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 10:43:30,328:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:14,354:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 10:44:14,364:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:37,555:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 10:44:37,564:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:40,864:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 10:44:40,879:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:47,755:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 10:44:47,768:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:53,174:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 10:44:53,194:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:44:56,121:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 10:44:56,131:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:45:01,469:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 10:45:01,483:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 10:45:06,456:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 10:45:06,466:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 10:45:40,513:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-kare-zirkon-tasli-luks-kupe-u-223812
+[2022-12-27 10:45:42,284:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-yaprak-damla-zirkon-tasli-luks-kupe-u-223808
+[2022-12-27 10:45:51,324:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-damla-luks-celik-kupe-u-223777
+[2022-12-27 10:45:52,504:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-kalp-luks-celik-kupe-u-223774
+[2022-12-27 10:45:53,940:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-luks-celik-kupe-u-223771
+[2022-12-27 10:46:00,869:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-zincirli-zirkon-tasli-luks-celik-kupe-u-223744
+[2022-12-27 10:46:02,429:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-yilan-zirkon-tasli-luks-celik-kupe-u-223741
+[2022-12-27 10:46:14,752:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-kelebek-luks-celik-kupe-u-223707
+[2022-12-27 10:46:15,819:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-saturn-luks-celik-kupe-u-223704
+[2022-12-27 10:46:17,769:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-papatya-luks-celik-kupe-u-223686
+[2022-12-27 10:46:38,944:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-ugur-bocegi-yeni-sezon-kupe-u-223321
+[2022-12-27 10:46:42,678:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-karisik-yeni-sezon-kupe-u-223316
+[2022-12-27 10:46:48,814:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-cicek-mineli-halka-kupe-u-223094
+[2022-12-27 10:46:59,164:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-cicek-kristal-halka-kupe-u-222835
+[2022-12-27 10:47:05,795:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-puskullu-nota-boncuk-halka-kupe-u-222819
+[2022-12-27 10:47:09,454:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-boncuk-halka-kupe-u-222806
+[2022-12-27 10:47:57,744:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalptrend-mineli-kupe-u-221538
+[2022-12-27 10:48:05,209:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-kalp-yeni-sezon-kupe-u-220695
+[2022-12-27 10:48:24,479:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-oval-zirkon-tasli-luks-kupe-u-219980
+[2022-12-27 10:48:41,077:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cicek-trend-mineli-kupe-u-219362
+[2022-12-27 10:48:42,208:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-trend-mineli-kupe-u-219359
+[2022-12-27 10:48:53,664:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/baykus-trend-mineli-kupe-u-219336
+[2022-12-27 10:48:56,288:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-nota-zirkon-tasli-lux-kupe-u-219324
+[2022-12-27 10:48:57,955:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-cubuk-zirkon-tasli-lux-kupe-u-219317
+[2022-12-27 10:49:09,157:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-goz-nazar-zirkon-tasli-lux-kupe-u-219281
+[2022-12-27 10:49:10,791:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-yaprak-zirkon-tasli-lux-kupe-u-219278
+[2022-12-27 10:49:17,957:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-deniz-yildizi-zirkon-tasli-lux-kupe-u-219261
+[2022-12-27 10:49:20,641:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-balik-zirkon-tasli-lux-kupe-u-219255
+[2022-12-27 10:49:25,402:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-yildiz-zirkon-tasli-lux-kupe-u-219237
+[2022-12-27 10:49:26,372:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-cubuk-zirkon-tasli-lux-kupe-u-219234
+[2022-12-27 10:49:34,402:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/4-adet-emoji-mineli-inci-halka-kupe-u-218947
+[2022-12-27 10:49:36,102:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/4-adet-yildiz-mineli-inci-halka-kupe-u-218940
+[2022-12-27 10:49:37,312:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/4-adet-kalp-mineli-inci-halka-kupe-u-218933
+[2022-12-27 10:49:42,102:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-zirkon-tasli-kupe-u-218735
+[2022-12-27 10:49:43,187:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-agackakan-zirkon-tasli-kupe-u-218732
+[2022-12-27 10:49:46,173:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-cizgili-nazar-zirkon-tasli-kupe-u-218705
+[2022-12-27 10:49:47,252:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-noktali-nazar-zirkon-tasli-kupe-u-218699
+[2022-12-27 10:50:00,974:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-mineli-kupe-u-218357
+[2022-12-27 10:50:09,425:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-mineli-inci-halka-kupe-u-218325
+[2022-12-27 10:50:10,427:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-mineli-inci-halka-kupe-u-218318
+[2022-12-27 10:50:17,032:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/4-adet-cicek-inci-halka-kupe-u-218292
+[2022-12-27 10:50:31,612:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/nazar-inci-halka-kupe-u-217560
+[2022-12-27 10:50:33,369:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-kristal-mineli-halka-kupe-u-217555
+[2022-12-27 10:50:35,267:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-kristal-mineli-halka-kupe-u-217550
+[2022-12-27 10:50:36,302:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-kristal-mineli-halka-kupe-u-217545
+[2022-12-27 10:50:37,333:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-kristal-mineli-halka-kupe-u-217540
+[2022-12-27 10:50:38,793:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-kristal-mineli-halka-kupe-u-217535
+[2022-12-27 10:50:42,293:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/fimo-halka-kupe-renkli-u-217203
+[2022-12-27 10:50:43,822:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/fimo-halka-kupe-u-217196
+[2022-12-27 10:50:52,888:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-yeni-sezon-metal-kupe-u-215898
+[2022-12-27 10:50:53,965:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cicek-zirkon-tasli-kikirdak-kupe-u-215819
+[2022-12-27 10:51:02,401:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ay-yildiz-zirkon-tasli-kikirdak-kupe-u-215810
+[2022-12-27 10:51:11,698:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cicek-luks-zara-kupe-u-215034
+[2022-12-27 10:51:12,650:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-luks-zara-kupe-u-215025
+[2022-12-27 10:51:13,769:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/damla-luks-zara-kupe-u-215017
+[2022-12-27 10:51:15,486:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/damla-luks-zara-kupe-u-214989
+[2022-12-27 10:51:29,612:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-zirkon-tasli-luks-kupe-u-213865
+[2022-12-27 10:51:34,077:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-boru-halka-kupe-2-cm-u-213239
+[2022-12-27 10:51:39,662:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-tasli-halka-kupe-15-cm-u-212098
+[2022-12-27 10:51:40,573:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/klipsi-halka-kupe-3-cm-u-212095
+[2022-12-27 10:51:41,966:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/suyolu-yeni-sezon-kikirdak-kupe-u-212057
+[2022-12-27 10:51:53,499:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/damla-zirkon-tasli-luks-kupe-15-cm-u-209081
+[2022-12-27 10:52:08,666:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-adet-inci-tasli-halka-kupe-25-cm-u-204925
+[2022-12-27 10:52:10,272:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kuru-kafa-figurlu-celik-erkek-kupe-1-adet-u-202530
+[2022-12-27 10:52:19,712:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6li-zirkon-tasli-kupe-u-198207
+[2022-12-27 10:52:21,933:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/6-kaplumbaga-kus-figurlu-mineli-halka-kupe-u-197678
+[2022-12-27 10:52:23,986:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/4lu-ezme-halka-kupe-15-cm-u-197331
+[2022-12-27 10:52:30,242:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-goz-figurlu-luks-zirkon-tasli-celik-kupe-u-193660
+[2022-12-27 10:52:32,583:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/rakam-figurlu-luks-zirkon-tasli-celik-kupe-u-193030
+[2022-12-27 10:52:34,790:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-figurlu-polyester-kupe-u-192670
+[2022-12-27 10:52:35,936:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/fatma-ana-eli-figurlu-zirkon-tasli-kikirdak-kupe-u-190301
+[2022-12-27 10:52:38,489:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-figurlu-zirkon-tasli-kikirdak-kupe-u-190296
+[2022-12-27 10:52:41,133:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-kikirdak-kupe-u-190276
+[2022-12-27 10:52:42,782:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zincir-figurlu-lux-zirkon-tasli-kikirdak-kupe-u-190268
+[2022-12-27 10:52:44,542:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-figurlu-lux-zirkon-tasli-kikirdak-kupe-u-190257
+[2022-12-27 10:52:46,032:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tasli-otantik-kupe-u-189637
+[2022-12-27 10:52:47,099:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-kikirdak-kupe-u-188276
+[2022-12-27 10:52:48,123:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-kikirdak-kupe-u-188271
+[2022-12-27 10:52:50,196:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-lux-kikirdak-kupe-u-188265
+[2022-12-27 10:52:51,713:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-oval-figurlu-lux-celik-kupe-u-187196
+[2022-12-27 10:52:53,057:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/klipsi-metal-halka-kupe-5-cm-u-186562
+[2022-12-27 10:52:54,387:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-adet-zirkon-tasli-crt-lux-celik-kupe-u-186040
+[2022-12-27 10:52:56,552:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-kikirdak-kupe-u-185299
+[2022-12-27 10:52:58,660:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kilitli-ezme-halka-kupe-7-cm-u-184883
+[2022-12-27 10:53:00,138:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/luks-celik-kupe-13-cm-u-184653
+[2022-12-27 10:53:01,337:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yuvarlak-figurlu-zirkon-tasli-kikirdak-kupe-u-183715
+[2022-12-27 10:53:05,972:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/klasik-halka-kupe-u-181057
+[2022-12-27 10:53:07,732:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-celik-kupe-1-adet-u-173895
+[2022-12-27 10:53:09,407:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/koseli-celik-kupe-1-adet-u-173892
+[2022-12-27 10:53:11,035:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/simli-kristal-tasli-halka-puskul-kupe-u-173534
+[2022-12-27 10:53:12,746:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ezme-minik-halka-kupe-u-160548
+[2022-12-27 10:53:13,646:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/klasik-halka-kupe-u-160532
+[2022-12-27 10:53:16,088:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kristal-tasli-halka-puskul-kupe-u-157475
+[2022-12-27 10:53:20,388:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/swarovski-fitil-kupe-u-147986
+[2022-12-27 10:53:24,155:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kaplumbaga-nazarli-cam-kupe-u-81196
+[2022-12-27 10:53:28,017:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/nazarli-cam-kupe-u-75334
+[2022-12-27 10:54:53,651:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/deniz-yildizi-trend-ikili-kolye-u-223210
+[2022-12-27 10:55:03,781:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tek-tasli-uclu-kolye-u-223197
+[2022-12-27 10:55:19,495:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yonca-trend-ikili-kolye-u-223174
+[2022-12-27 10:56:23,021:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-inci-kum-boncuk-kolye-u-223017
+[2022-12-27 10:56:27,151:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/inci-kum-boncuk-kolye-u-222997
+[2022-12-27 10:56:28,870:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/balik-yeni-sezon-inci-kolye-u-222989
+[2022-12-27 10:56:55,933:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/mavi-renkli-kanavice-etamin-kolye-u-222497
+[2022-12-27 10:56:58,183:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/mor-renkli-kanavice-etamin-kolye-u-222493
+[2022-12-27 10:56:59,811:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kirmizi-renkli-kanavice-etamin-kolye-u-222489
+[2022-12-27 10:57:13,471:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-canli-kolye-ucu-u-222387
+[2022-12-27 10:57:43,276:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kunye-isim-yazilabilir-celik-kolye-u-222103
+[2022-12-27 10:57:56,528:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/inci-kristal-boncuk-kolye-u-221941
+[2022-12-27 10:57:58,072:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-kristal-kum-boncuk-kolye-u-221932
+[2022-12-27 10:58:06,742:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-zincirli-inci-trend-kolye-u-221786
+[2022-12-27 10:58:08,556:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/inci-kolye-ucu-1-adet-u-221684
+[2022-12-27 10:58:10,541:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ugurlu-rakamlar-uclu-kolye-u-221657
+[2022-12-27 10:58:28,967:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-zirkon-tasli-kolye-u-221001
+[2022-12-27 10:58:37,416:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-kum-boncuk-inci-kolye-u-220784
+[2022-12-27 10:58:38,812:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-kum-boncuk-kolye-u-220773
+[2022-12-27 10:58:57,462:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-luks-celik-kolye-u-220195
+[2022-12-27 10:59:33,563:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kemal-ataturk-cini-kolye-u-219473
+[2022-12-27 10:59:46,918:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-zincirli-nazar-trend-kolyec-u-219418
+[2022-12-27 10:59:49,609:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-zincirli-kalp-trend-kolye-u-219415
+[2022-12-27 10:59:56,021:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3-zincirli-nazar-trend-kolye-u-219390
+[2022-12-27 10:59:57,670:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/silindir-isim-yazilabilir-celik-kolye-ucu-u-219222
+[2022-12-27 11:00:08,698:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-zirkon-tasli-kolye-u-218613
+[2022-12-27 11:00:09,698:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-zirkon-tasli-kolye-u-218598
+[2022-12-27 11:00:10,574:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kare-zirkon-tasli-kolye-u-218589
+[2022-12-27 11:00:14,631:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kanat-zirkon-tasli-yeni-sezon-kolye-u-218582
+[2022-12-27 11:00:20,028:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-zirkon-tasli-yeni-sezon-kolye-u-218570
+[2022-12-27 11:00:21,146:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/papatya-zirkon-tasli-yeni-sezon-kolye-u-218566
+[2022-12-27 11:00:25,573:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yilan-zirkon-tasli-yeni-sezon-kolye-u-218558
+[2022-12-27 11:00:30,388:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kedi-zirkon-tasli-yeni-sezon-kolye-u-218545
+[2022-12-27 11:00:36,844:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kristal-kum-boncuk-kolye-u-218049
+[2022-12-27 11:00:44,407:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tugra-altin-kaplama-kolye-u-217625
+[2022-12-27 11:01:32,290:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/nazar-kum-boncuk-ikili-kolye-u-217232
+[2022-12-27 11:01:36,969:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/nazar-inci-kum-boncuk-kolye-u-217089
+[2022-12-27 11:01:49,862:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/damla-nazar-zirkon-tasli-yeni-sezon-kolye-u-214606
+[2022-12-27 11:01:51,207:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-zirkon-tasli-yeni-sezon-kolye-u-214600
+[2022-12-27 11:01:52,542:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cark-zirkon-tasli-yeni-sezon-kolye-u-214592
+[2022-12-27 11:01:53,732:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/nazar-zirkon-tasli-yeni-sezon-kolye-u-214590
+[2022-12-27 11:01:55,869:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yuvarlak-zirkon-tasli-yeni-sezon-kolye-u-214585
+[2022-12-27 11:01:57,371:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-zirkon-tasli-yeni-sezon-kolye-u-214577
+[2022-12-27 11:01:58,377:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-zirkon-tasli-yeni-sezon-kolye-u-214573
+[2022-12-27 11:01:59,684:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/bacak-top-zinciri-u-214466
+[2022-12-27 11:02:03,706:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yuvarlak-isim-yazilabilir-celik-kolye-ucu-u-214029
+[2022-12-27 11:02:05,574:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kobra-luks-celik-kolye-60-cm-u-214000
+[2022-12-27 11:02:12,280:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yuvarlak-isim-yazilabilir-tasli-bos-plaka-kolye-u-213610
+[2022-12-27 11:02:21,824:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ayicik-sari-renkli-zirkon-tasli-trend-kolye-u-213345
+[2022-12-27 11:02:23,836:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-zirkon-tasli-trend-kolye-u-212951
+[2022-12-27 11:02:25,951:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kristal-tasli-tel-kolye-1-adet-u-212870
+[2022-12-27 11:02:55,104:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ucgen-tasli-otantik-kolye-u-211789
+[2022-12-27 11:03:14,679:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ters-duz-celik-zincirli-kolye-50-cm-u-211071
+[2022-12-27 11:03:19,252:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kunye-isim-yazilabilir-celik-kolye-ucu-u-211062
+[2022-12-27 11:03:20,706:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/dikdortgen-isim-yazilabilir-celik-kolye-ucu-u-211057
+[2022-12-27 11:03:22,422:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-isim-yazilabilir-celik-kolye-ucu-u-211052
+[2022-12-27 11:03:24,129:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-isim-yazilabilir-celik-kolye-ucu-u-211047
+[2022-12-27 11:03:25,290:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tugra-altin-kaplama-kolye-u-210135
+[2022-12-27 11:03:26,231:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tugra-altin-kaplama-kolye-u-210132
+[2022-12-27 11:03:27,346:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tasli-altin-kaplama-kolye-u-210129
+[2022-12-27 11:03:28,274:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tugra-altin-kaplama-kolye-u-210126
+[2022-12-27 11:04:00,923:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cavus-zincir-kolye-u-206507
+[2022-12-27 11:04:09,986:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/sonsuzluk-figurlu-zirkon-tasli-trend-kolye-u-205635
+[2022-12-27 11:04:11,154:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-figurlu-zirkon-tasli-trend-minik-kolye-u-205631
+[2022-12-27 11:04:15,075:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kalp-figurlu-zirkon-tasli-trend-minik-kolye-u-205615
+[2022-12-27 11:04:17,045:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/vav-figurlu-zirkon-tasli-trend-minik-kolye-u-205611
+[2022-12-27 11:04:23,379:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kartanesi-figurlu-zirkon-tasli-trend-kolye-u-205596
+[2022-12-27 11:04:25,905:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/zirkon-tasli-trend-kolye-u-205593
+[2022-12-27 11:04:30,167:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kartanesi-figurlu-zirkon-tasli-trend-kolye-u-205584
+[2022-12-27 11:04:40,120:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kartanesi-figurlu-zirkon-tasli-trend-kolye-u-204058
+[2022-12-27 11:04:45,611:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/su-ejderhasi-figurlu-zirkon-tasli-trend-kolye-u-203319
+[2022-12-27 11:04:47,081:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/cift-el-figurlu-kolye-u-203172
+[2022-12-27 11:05:24,059:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/bitanem-yazili-ritim-figurlu-yeni-sezon-ikili-kolye-u-202022
+[2022-12-27 11:05:50,107:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tasli-yaka-kolye-u-200948
+[2022-12-27 11:05:58,992:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ordek-figurlu-tasli-kolye-u-199888
+[2022-12-27 11:06:17,597:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yonca-figurlu-luks-celik-kolye-kucuk-boy-u-199272
+[2022-12-27 11:06:22,008:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/inci-fimo-kolye-u-197820
+[2022-12-27 11:06:27,283:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/meyve-figurlu-inci-fimo-kolye-u-196991
+[2022-12-27 11:06:31,043:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yeni-sezon-inci-fimo-kolye-u-196813
+[2022-12-27 11:06:35,858:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/meyve-figurlu-inci-fimo-kolye-u-195898
+[2022-12-27 11:07:02,148:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/3lu-yildiz-figurlu-kolye-u-192893
+[2022-12-27 11:07:03,888:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-figurlu-polyester-kolye-u-192572
+[2022-12-27 11:07:07,033:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/turkuaz-kirmizi-renkli-harfli-kolye-u-192432
+[2022-12-27 11:07:08,344:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/turkuaz-siyah-renkli-harfli-kolye-u-192399
+[2022-12-27 11:07:10,723:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/turkuaz-beyaz-renkli-harfli-kolye-u-192361
+[2022-12-27 11:07:14,713:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/turkuaz-harfli-kolye-u-192322
+[2022-12-27 11:07:51,181:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/beyaz-renkli-sedef-harfli-kolye-u-185888
+[2022-12-27 11:07:52,331:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/siyah-renkli-sedef-harfli-kolye-u-185859
+[2022-12-27 11:07:56,280:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/boncuklu-burgulu-zincir-kolye-u-183517
+[2022-12-27 11:08:22,513:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kelebek-uclu-kolye-u-171315
+[2022-12-27 11:08:23,609:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/patenci-kiz-uclu-kolye-u-171310
+[2022-12-27 11:08:32,303:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/tarak-makas-metal-kolye-u-167404
+[2022-12-27 11:09:06,498:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/oval-zirkon-tasli-kolye-u-163681
+[2022-12-27 11:09:28,124:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/kolye-aparati-u-160979
+[2022-12-27 11:10:04,354:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/roz-renk-harfli-kolye-u-156346
+[2022-12-27 11:10:13,934:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/harfli-kolye-u-152113
+[2022-12-27 11:10:37,412:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/canli-kolye-u-146959
+[2022-12-27 11:11:06,482:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ataturk-imzali-zirkon-tasli-kolye-u-143619
+[2022-12-27 11:11:08,534:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ayyildiz-figurlu-zirkon-tasli-kolye-u-143615
+[2022-12-27 11:11:11,445:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/fanus-canli-kolye-u-140854
+[2022-12-27 11:11:13,479:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/plastik-boncuklu-burgulu-harfli-kolye-u-140087
+[2022-12-27 11:11:17,394:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/ayyildiz-figurlu-otantik-kolye-u-139760
+[2022-12-27 11:11:21,004:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/sedef-harfli-kolye-u-139338
+[2022-12-27 11:11:33,404:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/harfli-kolye-u-126013
+[2022-12-27 11:11:46,633:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/yildiz-otantik-kolye-u-124978
+[2022-12-27 11:12:11,894:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/canli-kolye-u-83613
+[2022-12-27 11:12:21,805:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/miknatisli-yilan-kolye-kemer-u-39123
+[2022-12-27 11:37:39,288:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 11:37:40,216:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 11:37:40,596:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 11:37:40,854:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 11:37:40,856:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:38:33,057:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 11:38:33,074:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:02,630:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 11:39:02,647:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:06,060:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 11:39:06,075:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:14,719:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 11:39:14,735:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:20,210:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 11:39:20,231:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:23,000:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 11:39:23,019:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:29,290:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 11:39:29,305:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 11:39:34,857:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 11:39:34,876:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 11:42:42,925:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-damla-zirkon-tasli-luks-kupe-u-223815
+[2022-12-27 11:53:30,248:ERROR:mainLog:MainThread] Product link error: list index out of range | Status: 200 | Reason: OK | Link: https://toptanci.com/xuping-kare-zirkon-tasli-luks-kupe-u-223812
+[2022-12-27 12:28:01,674:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 12:28:33,570:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 12:28:34,992:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 12:28:35,399:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 12:28:35,632:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 12:28:35,653:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:30:35,973:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 12:30:35,983:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:31:35,653:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 12:31:35,670:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:31:40,993:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 12:31:41,008:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:31:53,188:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 12:31:53,203:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:32:03,068:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 12:32:03,085:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:32:06,673:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 12:32:06,687:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:32:12,743:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 12:32:12,764:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:32:18,792:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 12:32:18,812:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 12:51:15,711:INFO:mainLog:MainThread] New ULUSOYSPOR session has been started
+[2022-12-27 12:51:17,110:INFO:mainLog:MainThread] New page request has been made | Response: 200
+[2022-12-27 12:51:17,483:INFO:mainLog:MainThread] Categories found count: 8
+[2022-12-27 12:51:17,760:INFO:mainLog:MainThread] Category being processed: Bijouterie
+[2022-12-27 12:51:17,781:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:52:52,845:INFO:mainLog:MainThread] Category being processed: Accessory
+[2022-12-27 12:52:52,862:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:53:33,124:INFO:mainLog:MainThread] Category being processed: Cosmetic
+[2022-12-27 12:53:33,140:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:53:39,305:INFO:mainLog:MainThread] Category being processed: Souvenir
+[2022-12-27 12:53:39,322:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:53:51,730:INFO:mainLog:MainThread] Category being processed: party material
+[2022-12-27 12:53:51,747:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:54:04,885:INFO:mainLog:MainThread] Category being processed: Textile
+[2022-12-27 12:54:04,903:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:54:10,523:INFO:mainLog:MainThread] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 12:54:10,541:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:54:20,462:INFO:mainLog:MainThread] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 12:54:20,479:INFO:mainLog:MainThread] Pulling products links
+[2022-12-27 12:54:30,069:INFO:mainLog:MainThread] Pulled products links total: 8
+[2022-12-27 12:54:30,088:INFO:mainLog:MainThread] Processing products start
+[2022-12-27 16:18:57,594:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-27 16:18:59,107:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-27 16:18:59,510:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-27 16:18:59,762:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-27 16:18:59,778:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-27 16:20:57,826:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-27 16:21:34,851:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-27 16:21:35,259:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-27 16:21:35,523:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-27 16:21:35,539:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-27 16:28:16,884:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-27 16:28:18,069:INFO:mainLog:Thread-1 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-27 16:28:18,167:INFO:mainLog:Thread-1 (toptanciScraper)] Categories found count: 8
+[2022-12-27 16:28:18,393:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-27 16:28:18,395:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:28:59,954:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-27 16:29:01,952:INFO:mainLog:Thread-1 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-27 16:29:02,053:INFO:mainLog:Thread-1 (toptanciScraper)] Categories found count: 8
+[2022-12-27 16:29:02,275:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-27 16:29:02,280:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:30:05,894:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Accessory
+[2022-12-27 16:30:05,895:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:30:47,157:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Accessory
+[2022-12-27 16:30:47,162:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:30:59,120:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Cosmetic
+[2022-12-27 16:30:59,122:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:31:07,730:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Souvenir
+[2022-12-27 16:31:07,732:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:31:30,806:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: party material
+[2022-12-27 16:31:30,807:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:31:49,976:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Textile
+[2022-12-27 16:31:49,976:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:01,090:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 16:32:01,092:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:01,703:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Cosmetic
+[2022-12-27 16:32:01,707:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:10,658:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Souvenir
+[2022-12-27 16:32:10,663:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:23,651:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 16:32:23,661:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:37,125:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: party material
+[2022-12-27 16:32:37,130:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:32:42,915:INFO:mainLog:Thread-1 (toptanciScraper)] Pulled products links total: 8
+[2022-12-27 16:32:42,917:INFO:mainLog:Thread-1 (toptanciScraper)] Processing products start
+[2022-12-27 16:32:53,925:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Textile
+[2022-12-27 16:32:53,929:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:33:02,425:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-27 16:33:02,425:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:33:22,141:INFO:mainLog:Thread-1 (toptanciScraper)] Category being processed: Packaging & Showcase Aks.
+[2022-12-27 16:33:22,157:INFO:mainLog:Thread-1 (toptanciScraper)] Pulling products links
+[2022-12-27 16:33:37,998:INFO:mainLog:Thread-1 (toptanciScraper)] Pulled products links total: 8
+[2022-12-27 16:33:38,004:INFO:mainLog:Thread-1 (toptanciScraper)] Processing products start

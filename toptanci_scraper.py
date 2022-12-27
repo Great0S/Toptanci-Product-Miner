@@ -1,15 +1,15 @@
+import json
 import logging
 import os
 import re
 from logging import config
 
 import requests
-import webcolors
 from bs4 import BeautifulSoup
-from rich.progress import Progress, track
+from rich.progress import Progress
 
 from config.logger import log_config
-from app.tasks import ts
+from app.tasks import create_product, ts
 
 
 config.dictConfig(log_config)
@@ -17,24 +17,20 @@ logger = logging.getLogger('mainLog')
 
 products_link = {"Bijouterie": [], "Accessory": [], "Cosmetic": [], "Souvenir": [], "party material": [
 ], "Textile": [], "Natural Stone & Jewelry Materials": [], "Packaging & Showcase Aks.": []}
-products = []
+products = {"Bijouterie": [], "Accessory": [], "Cosmetic": [], "Souvenir": [], "party material": [
+], "Textile": [], "Natural Stone & Jewelry Materials": [], "Packaging & Showcase Aks.": []}
 URL = 'https://toptanci.com/'
-colors = list(map(str, webcolors.CSS3_NAMES_TO_HEX.keys()))
 headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'}
+json_data = None
 
-
-page_element_count = sub_categories_count = elemen_page_nav_count = element_sub_links_count = 0
-
-
-def ulusoyScraper():
-    global page_element_count, sub_categories_count, elemen_page_nav_count, element_sub_links_count
-
+def toptanciScraper():
+    
     with Progress() as progress:
 
-        task1 = progress.add_task("[red]Categories...")
-        task2 = progress.add_task("[green]Sub-Categories...")
-        task3 = progress.add_task("[cyan]Pages...")
+        task1 = progress.add_task("[red]Categories")
+        task2 = progress.add_task("[green]Sub-Categories")
+        task3 = progress.add_task("[cyan]Pages")
 
         session = requests.Session()
         session.headers = headers
@@ -102,9 +98,9 @@ def ulusoyScraper():
         logger.info(f'Pulled products links total: {len(products_link)}')
         logger.info(f'Processing products start')
 
-        task4 = progress.add_task("[purple]Scraping categories...")
-        task5 = progress.add_task("[cyan]Scraping sub-categories...")
-        task6 = progress.add_task("[cyan]Scraping Items...")
+        task4 = progress.add_task("[purple]Scraping categories")
+        task5 = progress.add_task("[dark blue]Scraping sub-categories")
+        task6 = progress.add_task("[blue]Scraping Items...")
 
         for product in progress.track(products_link, task_id=3, total=len(products_link)):
             for dum, link in enumerate(products_link[product]):
@@ -113,56 +109,93 @@ def ulusoyScraper():
                         for item_link in progress.track(item[item_name], task_id=5, total=len(item[item_name])):
                             try:
                                 product_link = session.get(item_link)
-                                product_soup = BeautifulSoup(product_link.content, "html.parser")
-                            except Exception as e:
+                                product_soup = BeautifulSoup(
+                                    product_link.content, "html.parser")
+
+                                select_sub = product_soup.select(
+                                    'ol.breadcrumb.text-truncate')[0]
+                                select_sub2 = select_sub.select(
+                                    'li.breadcrumb-item')
+                                if len(select_sub2) == 4:
+                                    sub_main_category = ts.translate(
+                                        re.sub('\n', '', select_sub2[2].text).strip())
+                                else:
+                                    sub_main_category = None
+                                product_name = ts.translate(product_soup.find(
+                                    'div', class_='col-10').contents[1].text)
+                                attrs_list = product_soup.select(
+                                    'table.table.table-hover.table-sm')
+                                atrributes = {
+                                    "color": [], "price": [], "stock": [], "code": []}
+                                for attr in attrs_list:
+                                    stok_yok = attr.find('div', text=re.compile("Stok Yok"))
+                                    if stok_yok:
+                                        break                                    
+                                    color_attr = ts.translate(attr.find(
+                                        'td', attrs={'style': 'width:30%;'}).text)
+                                    price_attr = re.sub(',', '.', re.sub('\₺', '', attr.find(
+                                        'div', text=re.compile(r'\₺')).text).strip())
+                                    stock_attr = int(
+                                        attr.find('strong', text=re.compile(r'\d+')).text)
+                                    code_attr = int(
+                                        attr.find('td', class_="", text=re.compile(r'\s\d+\s|\d+')).text)
+
+                                    atrributes['color'].append(color_attr)
+                                    atrributes['price'].append(price_attr)
+                                    atrributes['stock'].append(stock_attr)
+                                    atrributes['code'].append(code_attr)
+
+                                product_desc = ts.translate(re.sub(r'\w+;', '', product_soup.select(
+                                    'div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip())
+                                product_images = product_soup.select(
+                                    'img.img-fluid.btnVariantSmallImage')
+                                images = {"color": [], "link": []}
+                                for image in product_images:
+                                    img_link = image.attrs['data-src']
+                                    img_color = image.attrs['alt']
+
+                                    images['color'].append(img_link)
+                                    images['link'].append(img_color)
+
+                                products_update = {"sub-category": item_name, "sub-sub-category": sub_main_category,
+                                                   "name": product_name, "images": images, "descr": product_desc, "attrs": atrributes}
+                                products[product].append(products_update)
+
+                            except (Exception, IndexError) as e:
                                 logger.error(
-                                    f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason}")
+                                    f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason} | Link: {item_link}")
                                 continue
-                            
-                            select_sub = product_soup.select('ol.breadcrumb.text-truncate')[0]
-                            select_sub2 = select_sub.select('li.breadcrumb-item')
-                            if len(select_sub2) == 4:
-                                sub_main_category = re.sub('\n','',select_sub2[2].text).strip()
-                            else:
-                                sub_main_category = None
-                            product_name = product_soup.find('div', class_='col-10').contents[1].text
-                            attrs_list = product_soup.select('table.table.table-hover.table-sm')
-                            atrributes = {"color": [], "price": [], "stock": [], "code": []}
-                            for attr in attrs_list:
-                                color_attr = attr.contents[1].contents[1].contents[3].text
-                                price_attr = re.sub(',','.',re.sub('\₺','',attr.contents[3].contents[1].contents[5].contents[0].text).strip())
-                                stock_attr = int(attr.contents[3].contents[1].contents[7].contents[0].text)
-                                code_attr = int(re.sub('\n','',attr.contents[3].contents[1].contents[1].contents[0].text))
-
-                                atrributes['color'].append(color_attr)
-                                atrributes['price'].append(price_attr)
-                                atrributes['stock'].append(stock_attr)
-                                atrributes['code'].append(code_attr)                            
-                            
-                            product_desc = re.sub(r'\w+;','',product_soup.select('div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip()
-                            product_images = product_soup.select('img.img-fluid.btnVariantSmallImage')
-                            images = {"color": [], "link": []}
-                            for image in product_images:
-                                img_link = image.attrs['data-src']
-                                img_color = image.attrs['alt']
-                                
-                                images['color'].append(img_link)
-                                images['link'].append(img_color)
-                            
-                            products_update = {"main_category": product, "sub-category": item_name, "sub-sub-category": sub_main_category, "name": product_name, "images": product_images, "descr": product_desc, "attrs": attrs_list}
-                            products[element_title].append(products_update)
-
-        
+        save_data(products)
         logger.info("All data has been processed")
         return
 
 
+def save_data(data):
+    global json_data
+    File_path = 'extraction/data.json'
+    if os.path.exists(File_path):
+        
+        # Dumping categories into a dict var
+        open_json = open('extraction/data.json', encoding='utf-8')
+        json_data = json.load(open_json)            
+    else:
+        with open(File_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=False)
+        file.close()
+        open_json = open('extraction/data.json', encoding='utf-8')
+        json_data = json.load(open_json)
+        
+    return json_data
+
+
+
 def main():
-    # from threading import Thread
-    # new_thread = Thread(target=ulusoyScraper)
-    # new_thread.start()
-    # create_product(products)
-    ulusoyScraper()
+    global json_data
+    
+    from threading import Thread
+    new_thread = Thread(target=toptanciScraper)
+    new_thread.start()
+    create_product(json_data)
 
 
 # clearing the console from unnecessary
@@ -171,7 +204,7 @@ def cls(): return os.system("cls")
 
 cls()
 
-logger.info('New ULUSOYSPOR session has been started')
+logger.info('New TOPTANCI session has been started')
 
 if __name__ == '__main__':
     import time
@@ -179,4 +212,3 @@ if __name__ == '__main__':
     main()
     elapsed = time.perf_counter() - s
     logger.info("Tasks executed in {elapsed:0.2f} seconds.")
-    main()

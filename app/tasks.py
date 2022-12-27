@@ -9,6 +9,7 @@ import glob
 import logging
 
 from logging import config
+import time
 from progressbar import progressbar
 import requests
 from deep_translator import GoogleTranslator
@@ -42,47 +43,53 @@ def create_product(products):
         "Authorization": "Bearer secret_4i936SRqRp3317MZ51Aa4tVjeUVyGwW7",
         "Content-Type": 'application/json;charset: utf-8'
     }
-
+    {'sub-category': 'Name Necklace', 'sub-sub-category': None,  'images': {'color': [...], 'link': [...]}}
+    while not products:
+        time.sleep(60)
+        
+    # Dumping categories into a dict var    
+    categories = dump_categories()
+    
     # Checking message type
-    for product in progressbar(products):
-        switchLock = False
-        product_list = products[product]
-        MCategory = products[product][0]['category_id']
-        # Dumping categories into a dict var
-        categories = dump_categories(MCategory)
+    for product in products:
+        product_list = products[product]        
+        MCategory = categories['id'][categories['nameEn'].index(product)]
+        
+        
         try:
-            for data in tqdm(product_list, desc=f'New product %d'):
+            for data in product_list:
                 # Creating variables with ready to use data from telegram message
-                name = f'{product} Shoes'
-                nameAr = ts2.translate(f'{product} Shoes')
-                size = data['sizes']
-                pcQty = 0
-                if type(size) == str:
-                    processed_int = re.sub(r'\d\d:|Asorti:|\d\d.|Asorti :|=\d\W\w+\s\w+|=\d\W\w+|Asorti|\d\w+', '', size).strip()
-                    processed_int = processed_int.replace(':', ' ')
-                    pcQty = sum(map(int, processed_int.split()))
-                    if pcQty <= 1:
-                        pcQty = 8
-                else:
-                    pcQty = 8
-                pcPrice = math.ceil(((data['price'] * 1.04) / 18) + 1.5)
-                price = pcPrice * pcQty
-                sku = f"BFA{data['code']}"
-                color = data['color']
-                colorAr = ts2.translate(color)
-                age = data['age']
-                base = data['base']
-                baseAr = base
-                gender = genderAr = None
-                if re.search('Men|Kid', data['category']):
-                    gender = 'Male'
-                    genderAr = 'ذكر'
-                elif re.search('Baby', data['category']):
-                    gender = 'Unisex'
-                    genderAr = 'للجنسين'   
-                else:
-                    gender = 'Female'
-                    genderAr = 'أنثى'
+                name = data['name']
+                nameAr = ts2.translate(name)
+                desc = data['descr']
+                pc_quantity = []   
+                pc_price = []
+                color = []
+                sku = []
+                for pc in data['attrs']:
+                    pc_quantity.append(data['attrs']['stock'])
+                    pc_price.append(math.ceil(((data['attrs']['price'] * 1.3) / 18) + 1.5))
+                    color.append(data['attrs']['color'])
+                    sku.append(f"BFAK{data['attrs']['code']}")
+                    
+                price = pc_price * pc_quantity
+                class_id = None
+                atrributes = {
+                            "id": 158400257,
+                            "name": "UPC",
+                            "nameTranslated": {
+                                "ar": "رمز المنتج العالمي",
+                                "en": "UPC"
+                            },
+                            "value": f"{sku}",
+                            "valueTranslated": {
+                                "ar": f"{sku}",
+                                "en": f"{sku}"
+                            },
+                            "show": "DESCR",
+                            "type": "UPC"
+                        },
+                
                 true = True
                 false = False
 
@@ -119,7 +126,7 @@ def create_product(products):
                     },
                     "price": price,
                     "enabled": true,
-                    "productClassId": 36100251,
+                    "productClassId": class_id,
                     "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
                     "descriptionTranslated": {
                         "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
@@ -253,10 +260,10 @@ def create_product(products):
                                 "ar": "عدد القطع",
                                 "en": "Pieces count"
                             },
-                            "value": f"{pcQty}",
+                            "value": f"{pc_quantity}",
                             "valueTranslated": {
-                                "ar": f"{pcQty}",
-                                "en": f"{pcQty}"
+                                "ar": f"{pc_quantity}",
+                                "en": f"{pc_quantity}"
                             },
                             "show": "PRICE",
                             "type": "UNITS_IN_PRODUCT"
@@ -268,10 +275,10 @@ def create_product(products):
                                 "ar": "السعر للقطعة الواحدة",
                                 "en": "Price per  piece"
                             },
-                            "value": f"{pcPrice}",
+                            "value": f"{pc_price}",
                             "valueTranslated": {
-                                "ar": f"{pcPrice}",
-                                "en": f"{pcPrice}"
+                                "ar": f"{pc_price}",
+                                "en": f"{pc_price}"
                             },
                             "show": "PRICE",
                             "type": "PRICE_PER_UNIT"
