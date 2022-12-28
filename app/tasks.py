@@ -290,8 +290,8 @@ def create_product(products):
                         "ar": "السعر المعروض للسيري كامل",
                         "en": "The displayed price is for the full set"
                     },
-                    "googleProductCategory": 187,
-                    "googleProductCategoryName": "Apparel & Accessories > Shoes",
+                    "googleProductCategory": 16y7,
+                    "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
                     "productCondition": "NEW"
                 }
 
@@ -495,3 +495,212 @@ async def clear_all(media_path):
     Files = glob.glob('media/*')
     for file in Files:
         os.remove(file)
+        
+        
+        
+{
+            "id": 520048199,
+            "sku": "432fdf33",
+            "unlimited": true,
+            "inStock": true,
+            "name": "acce",
+            "nameTranslated": {
+                "ar": "",
+                "en": "acce"
+            },
+            "price": 0,
+            "productClassId": 36317504,
+            "enabled": true,
+            "options": [
+                {
+                    "type": "RADIO",
+                    "name": "color",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "color"
+                    },
+                    "choices": [
+                        {
+                            "text": "red",
+                            "textTranslated": {
+                                "ar": "",
+                                "en": "red"
+                            },
+                            "priceModifier": 5,
+                            "priceModifierType": "ABSOLUTE"
+                        },
+                        {
+                            "text": "blue",
+                            "textTranslated": {
+                                "ar": "",
+                                "en": "blue"
+                            },
+                            "priceModifier": 6,
+                            "priceModifierType": "ABSOLUTE"
+                        }
+                    ],
+                    "defaultChoice": 0,
+                    "required": false
+                },
+                {
+                    "type": "RADIO",
+                    "name": "stok",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "stok"
+                    },
+                    "choices": [
+                        {
+                            "text": "54",
+                            "textTranslated": {
+                                "ar": "",
+                                "en": "54"
+                            },
+                            "priceModifier": 0,
+                            "priceModifierType": "ABSOLUTE"
+                        },
+                        {
+                            "text": "23",
+                            "textTranslated": {
+                                "ar": "",
+                                "en": "23"
+                            },
+                            "priceModifier": 0,
+                            "priceModifierType": "ABSOLUTE"
+                        }
+                    ],
+                    "defaultChoice": 0,
+                    "required": false
+                }
+            ],
+            "defaultCombinationId": 301940169,
+            "description": "",
+            "descriptionTranslated": {
+                "ar": "",
+                "en": ""
+            },
+            "categoryIds": [],
+            "categories": [],
+            "defaultCategoryId": 0,
+            "seoTitle": "",
+            "seoTitleTranslated": {
+                "ar": "",
+                "en": ""
+            },
+            "seoDescription": "",
+            "seoDescriptionTranslated": {
+                "ar": "",
+                "en": ""
+            },
+            "attributes": [
+                {
+                    "id": 159588021,
+                    "name": "UPC",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "UPC"
+                    },
+                    "value": "123123ad",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "123123ad"
+                    },
+                    "show": "DESCR",
+                    "type": "UPC"
+                },
+                {
+                    "id": 159588022,
+                    "name": "Brand",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Brand"
+                    },
+                    "value": "bfsd",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "bfsd"
+                    },
+                    "show": "DESCR",
+                    "type": "BRAND"
+                },
+                {
+                    "id": 159588023,
+                    "name": "Gender",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Gender"
+                    },
+                    "value": "women",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "women"
+                    },
+                    "show": "DESCR",
+                    "type": "GENDER"
+                },
+                {
+                    "id": 159588024,
+                    "name": "Age group",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Age group"
+                    },
+                    "value": "23",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "23"
+                    },
+                    "show": "DESCR",
+                    "type": "AGE_GROUP"
+                },
+                {
+                    "id": 159588025,
+                    "name": "Color",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Color"
+                    },
+                    "value": "red",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "red"
+                    },
+                    "show": "DESCR",
+                    "type": "COLOR"
+                },
+                {
+                    "id": 159588028,
+                    "name": "Units in product",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Units in product"
+                    },
+                    "value": "5",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "5"
+                    },
+                    "show": "PRICE",
+                    "type": "UNITS_IN_PRODUCT"
+                },
+                {
+                    "id": 159588029,
+                    "name": "Price per unit",
+                    "nameTranslated": {
+                        "ar": "",
+                        "en": "Price per unit"
+                    },
+                    "value": "12",
+                    "valueTranslated": {
+                        "ar": "",
+                        "en": "12"
+                    },
+                    "show": "PRICE",
+                    "type": "PRICE_PER_UNIT"
+                }
+            ],
+            "googleItemCondition": "NEW",
+            "googleProductCategory": 167,
+            "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
+            "productCondition": "NEW"
+        }

@@ -165,6 +165,8 @@ def toptanciScraper():
                                 logger.error(
                                     f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason} | Link: {item_link}")
                                 continue
+                            except ChunkEncodingError as ex:
+                                print(f"Invalid chunk encoding {str(ex)}")
         save_data(products)
         logger.info("All data has been processed")
         return
