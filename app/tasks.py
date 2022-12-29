@@ -4,19 +4,16 @@ import json
 import math
 import os
 import random
-import re
 import glob
 import logging
 
 from logging import config
 import time
-from progressbar import progressbar
 import requests
 from deep_translator import GoogleTranslator
-import tqdm
 
 from config.logger import log_config
-from extraction.dump_category import check_category, dump_categories
+from dumps.dump_category import check_category, dump_categories
 
 # Declaring global variables
 config.dictConfig(log_config)
@@ -115,185 +112,185 @@ def create_product(products):
                     seoNameAr = nameAr
                 seoName = jCatSec + ' / ' + name
 
-                body = {
-                    "sku": sku,
-                    "unlimited": true,
-                    "inStovalue": true,
-                    "name": name,
-                    "nameTranslated": {
-                        "ar": nameAr,
-                        "en": name
-                    },
-                    "price": price,
-                    "enabled": true,
-                    "productClassId": class_id,
-                    "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
-                    "descriptionTranslated": {
-                        "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
-                        "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
-                    },
-                    "categoryIds": [jCatMain, secondCategory],
-                    "categories": [{"id": jCatMain,
-                                    "enabled": True}, {"id": secondCategory,
-                                                       "enabled": True}],
-                    "defaultCategoryId": jCatMain,
-                    "seoTitle": f'{seoName}',
-                    "seoTitleTranslated": {
-                        "ar": seoNameAr,
-                        "en": seoName
-                    },
-                    "seoDescription": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
-                    "seoDescriptionTranslated": {
-                        "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
-                        "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
-                    },
-                    "attributes": [
-                        {
-                            "id": 158400257,
-                            "name": "UPC",
-                            "nameTranslated": {
-                                "ar": "رمز المنتج العالمي",
-                                "en": "UPC"
-                            },
-                            "value": f"{sku}",
-                            "valueTranslated": {
-                                "ar": f"{sku}",
-                                "en": f"{sku}"
-                            },
-                            "show": "DESCR",
-                            "type": "UPC"
-                        },
-                        {
-                            "id": 158400258,
-                            "name": "Brand",
-                            "nameTranslated": {
-                                "ar": "ماركة",
-                                "en": "Brand"
-                            },
-                            "value": "Al Beyan Fashion™",
-                            "valueTranslated": {
-                                "ar": "Al Beyan Fashion™",
-                                "en": "Al Beyan Fashion™"
-                            },
-                            "show": "DESCR",
-                            "type": "BRAND"
-                        },
-                        {
-                            "id": 158400259,
-                            "name": "Gender",
-                            "nameTranslated": {
-                                "ar": "الجنس",
-                                "en": "Gender"
-                            },
-                            "value": f"{gender}",
-                            "valueTranslated": {
-                                "ar": f"{genderAr}",
-                                "en": f"{gender}"
-                            },
-                            "show": "DESCR",
-                            "type": "GENDER"
-                        },
-                        {
-                            "id": 158400260,
-                            "name": "Age group",
-                            "nameTranslated": {
-                                "ar": "الفئة العمرية",
-                                "en": "Age group"
-                            },
-                            "value": f"{age}",
-                            "valueTranslated": {
-                                "ar": f"{age}",
-                                "en": f"{age}"
-                            },
-                            "show": "DESCR",
-                            "type": "AGE_GROUP"
-                        },
-                        {
-                            "id": 158816769,
-                            "name": "Base",
-                            "nameTranslated": {
-                                "ar": "القاعدة",
-                                "en": "Base"
-                            },
-                            "value": f"{base}",
-                            "valueTranslated": {
-                                "ar": f"{baseAr}",
-                                "en": f"{base}"
-                            },
-                            "type": "CUSTOM",
-                            "show": "DESCR"
-                        },
-                        {
-                            "id": 158400261,
-                            "name": "Color",
-                            "nameTranslated": {
-                                "ar": "اللون",
-                                "en": "Color"
-                            },
-                            "value": f"{color}",
-                            "valueTranslated": {
-                                "ar": f"{colorAr}",
-                                "en": f"{color}"
-                            },
-                            "show": "DESCR",
-                            "type": "COLOR"
-                        },
-                        {
-                            "id": 158400262,
-                            "name": "Sizes",
-                            "nameTranslated": {
-                                "ar": "مقاسات",
-                                "en": "Sizes"
-                            },
-                            "value": f"{size}",
-                            "valueTranslated": {
-                                "ar": f"{size}",
-                                "en": f"{size}"
-                            },
-                            "show": "DESCR",
-                            "type": "SIZE"
-                        },
-                        {
-                            "id": 158400265,
-                            "name": "Pieces count",
-                            "nameTranslated": {
-                                "ar": "عدد القطع",
-                                "en": "Pieces count"
-                            },
-                            "value": f"{pc_quantity}",
-                            "valueTranslated": {
-                                "ar": f"{pc_quantity}",
-                                "en": f"{pc_quantity}"
-                            },
-                            "show": "PRICE",
-                            "type": "UNITS_IN_PRODUCT"
-                        },
-                        {
-                            "id": 158400266,
-                            "name": "Price per  piece",
-                            "nameTranslated": {
-                                "ar": "السعر للقطعة الواحدة",
-                                "en": "Price per  piece"
-                            },
-                            "value": f"{pc_price}",
-                            "valueTranslated": {
-                                "ar": f"{pc_price}",
-                                "en": f"{pc_price}"
-                            },
-                            "show": "PRICE",
-                            "type": "PRICE_PER_UNIT"
-                        }
-                    ],
-                    "googleItemCondition": "NEW",
-                    "subtitle": "The displayed price is for the full set",
-                    "subtitleTranslated": {
-                        "ar": "السعر المعروض للسيري كامل",
-                        "en": "The displayed price is for the full set"
-                    },
-                    "googleProductCategory": 16y7,
-                    "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
-                    "productCondition": "NEW"
-                }
+                # body = {
+                #     "sku": sku,
+                #     "unlimited": true,
+                #     "inStovalue": true,
+                #     "name": name,
+                #     "nameTranslated": {
+                #         "ar": nameAr,
+                #         "en": name
+                #     },
+                #     "price": price,
+                #     "enabled": true,
+                #     "productClassId": class_id,
+                #     "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
+                #     "descriptionTranslated": {
+                #         "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
+                #         "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
+                #     },
+                #     "categoryIds": [jCatMain, secondCategory],
+                #     "categories": [{"id": jCatMain,
+                #                     "enabled": True}, {"id": secondCategory,
+                #                                        "enabled": True}],
+                #     "defaultCategoryId": jCatMain,
+                #     "seoTitle": f'{seoName}',
+                #     "seoTitleTranslated": {
+                #         "ar": seoNameAr,
+                #         "en": seoName
+                #     },
+                #     "seoDescription": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
+                #     "seoDescriptionTranslated": {
+                #         "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة من الأحذية التركية واحدث الصيحات النسائية والرجالية والاطفال التي تناسب جميع الأذواق. بمقاسات وألوان مختلفة.</b>",
+                #         "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish shoes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
+                #     },
+                #     "attributes": [
+                #         {
+                #             "id": 158400257,
+                #             "name": "UPC",
+                #             "nameTranslated": {
+                #                 "ar": "رمز المنتج العالمي",
+                #                 "en": "UPC"
+                #             },
+                #             "value": f"{sku}",
+                #             "valueTranslated": {
+                #                 "ar": f"{sku}",
+                #                 "en": f"{sku}"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "UPC"
+                #         },
+                #         {
+                #             "id": 158400258,
+                #             "name": "Brand",
+                #             "nameTranslated": {
+                #                 "ar": "ماركة",
+                #                 "en": "Brand"
+                #             },
+                #             "value": "Al Beyan Fashion™",
+                #             "valueTranslated": {
+                #                 "ar": "Al Beyan Fashion™",
+                #                 "en": "Al Beyan Fashion™"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "BRAND"
+                #         },
+                #         {
+                #             "id": 158400259,
+                #             "name": "Gender",
+                #             "nameTranslated": {
+                #                 "ar": "الجنس",
+                #                 "en": "Gender"
+                #             },
+                #             "value": f"{gender}",
+                #             "valueTranslated": {
+                #                 "ar": f"{genderAr}",
+                #                 "en": f"{gender}"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "GENDER"
+                #         },
+                #         {
+                #             "id": 158400260,
+                #             "name": "Age group",
+                #             "nameTranslated": {
+                #                 "ar": "الفئة العمرية",
+                #                 "en": "Age group"
+                #             },
+                #             "value": f"{age}",
+                #             "valueTranslated": {
+                #                 "ar": f"{age}",
+                #                 "en": f"{age}"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "AGE_GROUP"
+                #         },
+                #         {
+                #             "id": 158816769,
+                #             "name": "Base",
+                #             "nameTranslated": {
+                #                 "ar": "القاعدة",
+                #                 "en": "Base"
+                #             },
+                #             "value": f"{base}",
+                #             "valueTranslated": {
+                #                 "ar": f"{baseAr}",
+                #                 "en": f"{base}"
+                #             },
+                #             "type": "CUSTOM",
+                #             "show": "DESCR"
+                #         },
+                #         {
+                #             "id": 158400261,
+                #             "name": "Color",
+                #             "nameTranslated": {
+                #                 "ar": "اللون",
+                #                 "en": "Color"
+                #             },
+                #             "value": f"{color}",
+                #             "valueTranslated": {
+                #                 "ar": f"{colorAr}",
+                #                 "en": f"{color}"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "COLOR"
+                #         },
+                #         {
+                #             "id": 158400262,
+                #             "name": "Sizes",
+                #             "nameTranslated": {
+                #                 "ar": "مقاسات",
+                #                 "en": "Sizes"
+                #             },
+                #             "value": f"{size}",
+                #             "valueTranslated": {
+                #                 "ar": f"{size}",
+                #                 "en": f"{size}"
+                #             },
+                #             "show": "DESCR",
+                #             "type": "SIZE"
+                #         },
+                #         {
+                #             "id": 158400265,
+                #             "name": "Pieces count",
+                #             "nameTranslated": {
+                #                 "ar": "عدد القطع",
+                #                 "en": "Pieces count"
+                #             },
+                #             "value": f"{pc_quantity}",
+                #             "valueTranslated": {
+                #                 "ar": f"{pc_quantity}",
+                #                 "en": f"{pc_quantity}"
+                #             },
+                #             "show": "PRICE",
+                #             "type": "UNITS_IN_PRODUCT"
+                #         },
+                #         {
+                #             "id": 158400266,
+                #             "name": "Price per  piece",
+                #             "nameTranslated": {
+                #                 "ar": "السعر للقطعة الواحدة",
+                #                 "en": "Price per  piece"
+                #             },
+                #             "value": f"{pc_price}",
+                #             "valueTranslated": {
+                #                 "ar": f"{pc_price}",
+                #                 "en": f"{pc_price}"
+                #             },
+                #             "show": "PRICE",
+                #             "type": "PRICE_PER_UNIT"
+                #         }
+                #     ],
+                #     "googleItemCondition": "NEW",
+                #     "subtitle": "The displayed price is for the full set",
+                #     "subtitleTranslated": {
+                #         "ar": "السعر المعروض للسيري كامل",
+                #         "en": "The displayed price is for the full set"
+                #     },
+                #     "googleProductCategory": 167,
+                #     "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
+                #     "productCondition": "NEW"
+                # }
 
                 # Parsing collected data
                 ResContent, resCode = poster(body)
@@ -498,209 +495,209 @@ async def clear_all(media_path):
         
         
         
-{
-            "id": 520048199,
-            "sku": "432fdf33",
-            "unlimited": true,
-            "inStock": true,
-            "name": "acce",
-            "nameTranslated": {
-                "ar": "",
-                "en": "acce"
-            },
-            "price": 0,
-            "productClassId": 36317504,
-            "enabled": true,
-            "options": [
-                {
-                    "type": "RADIO",
-                    "name": "color",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "color"
-                    },
-                    "choices": [
-                        {
-                            "text": "red",
-                            "textTranslated": {
-                                "ar": "",
-                                "en": "red"
-                            },
-                            "priceModifier": 5,
-                            "priceModifierType": "ABSOLUTE"
-                        },
-                        {
-                            "text": "blue",
-                            "textTranslated": {
-                                "ar": "",
-                                "en": "blue"
-                            },
-                            "priceModifier": 6,
-                            "priceModifierType": "ABSOLUTE"
-                        }
-                    ],
-                    "defaultChoice": 0,
-                    "required": false
-                },
-                {
-                    "type": "RADIO",
-                    "name": "stok",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "stok"
-                    },
-                    "choices": [
-                        {
-                            "text": "54",
-                            "textTranslated": {
-                                "ar": "",
-                                "en": "54"
-                            },
-                            "priceModifier": 0,
-                            "priceModifierType": "ABSOLUTE"
-                        },
-                        {
-                            "text": "23",
-                            "textTranslated": {
-                                "ar": "",
-                                "en": "23"
-                            },
-                            "priceModifier": 0,
-                            "priceModifierType": "ABSOLUTE"
-                        }
-                    ],
-                    "defaultChoice": 0,
-                    "required": false
-                }
-            ],
-            "defaultCombinationId": 301940169,
-            "description": "",
-            "descriptionTranslated": {
-                "ar": "",
-                "en": ""
-            },
-            "categoryIds": [],
-            "categories": [],
-            "defaultCategoryId": 0,
-            "seoTitle": "",
-            "seoTitleTranslated": {
-                "ar": "",
-                "en": ""
-            },
-            "seoDescription": "",
-            "seoDescriptionTranslated": {
-                "ar": "",
-                "en": ""
-            },
-            "attributes": [
-                {
-                    "id": 159588021,
-                    "name": "UPC",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "UPC"
-                    },
-                    "value": "123123ad",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "123123ad"
-                    },
-                    "show": "DESCR",
-                    "type": "UPC"
-                },
-                {
-                    "id": 159588022,
-                    "name": "Brand",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Brand"
-                    },
-                    "value": "bfsd",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "bfsd"
-                    },
-                    "show": "DESCR",
-                    "type": "BRAND"
-                },
-                {
-                    "id": 159588023,
-                    "name": "Gender",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Gender"
-                    },
-                    "value": "women",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "women"
-                    },
-                    "show": "DESCR",
-                    "type": "GENDER"
-                },
-                {
-                    "id": 159588024,
-                    "name": "Age group",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Age group"
-                    },
-                    "value": "23",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "23"
-                    },
-                    "show": "DESCR",
-                    "type": "AGE_GROUP"
-                },
-                {
-                    "id": 159588025,
-                    "name": "Color",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Color"
-                    },
-                    "value": "red",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "red"
-                    },
-                    "show": "DESCR",
-                    "type": "COLOR"
-                },
-                {
-                    "id": 159588028,
-                    "name": "Units in product",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Units in product"
-                    },
-                    "value": "5",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "5"
-                    },
-                    "show": "PRICE",
-                    "type": "UNITS_IN_PRODUCT"
-                },
-                {
-                    "id": 159588029,
-                    "name": "Price per unit",
-                    "nameTranslated": {
-                        "ar": "",
-                        "en": "Price per unit"
-                    },
-                    "value": "12",
-                    "valueTranslated": {
-                        "ar": "",
-                        "en": "12"
-                    },
-                    "show": "PRICE",
-                    "type": "PRICE_PER_UNIT"
-                }
-            ],
-            "googleItemCondition": "NEW",
-            "googleProductCategory": 167,
-            "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
-            "productCondition": "NEW"
-        }
+# {
+#             "id": 520048199,
+#             "sku": "432fdf33",
+#             "unlimited": true,
+#             "inStock": true,
+#             "name": "acce",
+#             "nameTranslated": {
+#                 "ar": "",
+#                 "en": "acce"
+#             },
+#             "price": 0,
+#             "productClassId": 36317504,
+#             "enabled": true,
+#             "options": [
+#                 {
+#                     "type": "RADIO",
+#                     "name": "color",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "color"
+#                     },
+#                     "choices": [
+#                         {
+#                             "text": "red",
+#                             "textTranslated": {
+#                                 "ar": "",
+#                                 "en": "red"
+#                             },
+#                             "priceModifier": 5,
+#                             "priceModifierType": "ABSOLUTE"
+#                         },
+#                         {
+#                             "text": "blue",
+#                             "textTranslated": {
+#                                 "ar": "",
+#                                 "en": "blue"
+#                             },
+#                             "priceModifier": 6,
+#                             "priceModifierType": "ABSOLUTE"
+#                         }
+#                     ],
+#                     "defaultChoice": 0,
+#                     "required": false
+#                 },
+#                 {
+#                     "type": "RADIO",
+#                     "name": "stok",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "stok"
+#                     },
+#                     "choices": [
+#                         {
+#                             "text": "54",
+#                             "textTranslated": {
+#                                 "ar": "",
+#                                 "en": "54"
+#                             },
+#                             "priceModifier": 0,
+#                             "priceModifierType": "ABSOLUTE"
+#                         },
+#                         {
+#                             "text": "23",
+#                             "textTranslated": {
+#                                 "ar": "",
+#                                 "en": "23"
+#                             },
+#                             "priceModifier": 0,
+#                             "priceModifierType": "ABSOLUTE"
+#                         }
+#                     ],
+#                     "defaultChoice": 0,
+#                     "required": false
+#                 }
+#             ],
+#             "defaultCombinationId": 301940169,
+#             "description": "",
+#             "descriptionTranslated": {
+#                 "ar": "",
+#                 "en": ""
+#             },
+#             "categoryIds": [],
+#             "categories": [],
+#             "defaultCategoryId": 0,
+#             "seoTitle": "",
+#             "seoTitleTranslated": {
+#                 "ar": "",
+#                 "en": ""
+#             },
+#             "seoDescription": "",
+#             "seoDescriptionTranslated": {
+#                 "ar": "",
+#                 "en": ""
+#             },
+#             "attributes": [
+#                 {
+#                     "id": 159588021,
+#                     "name": "UPC",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "UPC"
+#                     },
+#                     "value": "123123ad",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "123123ad"
+#                     },
+#                     "show": "DESCR",
+#                     "type": "UPC"
+#                 },
+#                 {
+#                     "id": 159588022,
+#                     "name": "Brand",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Brand"
+#                     },
+#                     "value": "bfsd",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "bfsd"
+#                     },
+#                     "show": "DESCR",
+#                     "type": "BRAND"
+#                 },
+#                 {
+#                     "id": 159588023,
+#                     "name": "Gender",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Gender"
+#                     },
+#                     "value": "women",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "women"
+#                     },
+#                     "show": "DESCR",
+#                     "type": "GENDER"
+#                 },
+#                 {
+#                     "id": 159588024,
+#                     "name": "Age group",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Age group"
+#                     },
+#                     "value": "23",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "23"
+#                     },
+#                     "show": "DESCR",
+#                     "type": "AGE_GROUP"
+#                 },
+#                 {
+#                     "id": 159588025,
+#                     "name": "Color",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Color"
+#                     },
+#                     "value": "red",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "red"
+#                     },
+#                     "show": "DESCR",
+#                     "type": "COLOR"
+#                 },
+#                 {
+#                     "id": 159588028,
+#                     "name": "Units in product",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Units in product"
+#                     },
+#                     "value": "5",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "5"
+#                     },
+#                     "show": "PRICE",
+#                     "type": "UNITS_IN_PRODUCT"
+#                 },
+#                 {
+#                     "id": 159588029,
+#                     "name": "Price per unit",
+#                     "nameTranslated": {
+#                         "ar": "",
+#                         "en": "Price per unit"
+#                     },
+#                     "value": "12",
+#                     "valueTranslated": {
+#                         "ar": "",
+#                         "en": "12"
+#                     },
+#                     "show": "PRICE",
+#                     "type": "PRICE_PER_UNIT"
+#                 }
+#             ],
+#             "googleItemCondition": "NEW",
+#             "googleProductCategory": 167,
+#             "googleProductCategoryName": "Apparel & Accessories > Clothing Accessories",
+#             "productCondition": "NEW"
+#         }

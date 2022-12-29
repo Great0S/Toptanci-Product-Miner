@@ -1669,3 +1669,111 @@
 [2022-12-27 20:23:39,352:ERROR:mainLog:Thread-1 (toptanciScraper)] Product link error: ("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read)) | Status: 200 | Reason: OK | Link: https://toptanci.com/hematit-rondela-disk-tasi-6-mm-u-165620
 [2022-12-27 20:26:20,663:ERROR:mainLog:Thread-1 (toptanciScraper)] Product link error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')) | Status: 200 | Reason: OK | Link: https://toptanci.com/raf-stand-kancasi-15-cm-u-211404
 [2022-12-27 20:35:31,409:INFO:mainLog:Thread-1 (toptanciScraper)] All data has been processed
+[2022-12-29 12:07:30,015:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:12:01,140:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:12:02,007:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:12:02,323:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:12:02,775:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:12:02,785:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:16:40,696:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:16:41,460:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:16:41,714:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:16:41,930:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:16:41,940:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:27:34,566:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:27:35,431:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:27:35,685:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:27:35,910:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:27:35,930:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:30:54,559:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:30:55,331:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:30:55,605:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:30:55,898:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:30:55,914:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:31:51,428:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Accessory
+[2022-12-29 12:31:51,438:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:32:50,617:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:32:51,282:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:32:51,540:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:32:51,777:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:32:51,786:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:33:38,207:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Accessory
+[2022-12-29 12:33:38,217:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:35:34,323:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:36:08,783:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:36:09,031:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:36:09,277:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:36:09,284:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:37:42,939:WARNING:mainLog:Thread-7 (toptanciScraper)] Request is not successfull | Status: 200 | Reason: OK | Error: ("Connection broken: InvalidChunkLength(got length b'', 0 bytes read)", InvalidChunkLength(got length b'', 0 bytes read))
+[2022-12-29 12:41:44,411:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:41:45,753:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:41:45,993:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:41:46,237:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:41:46,241:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:42:35,243:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Accessory
+[2022-12-29 12:42:35,252:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:45:09,613:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:45:10,541:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:45:10,799:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:45:11,032:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:45:11,042:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:45:55,650:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Accessory
+[2022-12-29 12:45:55,661:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:46:31,908:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Cosmetic
+[2022-12-29 12:46:31,919:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:46:35,894:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Souvenir
+[2022-12-29 12:46:35,929:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:46:44,566:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: party material
+[2022-12-29 12:46:44,576:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:46:49,766:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Textile
+[2022-12-29 12:46:49,786:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:46:54,096:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-29 12:46:54,106:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:47:00,066:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Packaging & Showcase Aks.
+[2022-12-29 12:47:00,066:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:52:26,797:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 12:52:27,671:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 12:52:27,904:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 12:52:28,170:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Bijouterie
+[2022-12-29 12:52:28,182:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:53:15,906:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Accessory
+[2022-12-29 12:53:15,916:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:53:41,642:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Cosmetic
+[2022-12-29 12:53:41,656:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:53:45,103:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Souvenir
+[2022-12-29 12:53:45,115:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:53:52,746:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: party material
+[2022-12-29 12:53:52,761:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:53:57,415:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Textile
+[2022-12-29 12:53:57,424:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:54:00,006:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Natural Stone & Jewelry Materials
+[2022-12-29 12:54:00,021:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:54:04,980:INFO:mainLog:Thread-7 (toptanciScraper)] Category being processed: Packaging & Showcase Aks.
+[2022-12-29 12:54:04,992:INFO:mainLog:Thread-7 (toptanciScraper)] Pulling products links
+[2022-12-29 12:54:11,097:INFO:mainLog:Thread-7 (toptanciScraper)] Pulled products links total: 5188
+[2022-12-29 12:54:11,106:INFO:mainLog:Thread-7 (toptanciScraper)] Processing products start
+[2022-12-29 13:06:20,750:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:06:22,370:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:06:22,585:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:07:30,793:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:07:31,580:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:07:31,795:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:08:27,142:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:08:27,982:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:08:28,206:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:08:45,897:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:08:46,817:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:08:47,050:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:09:22,983:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:09:23,802:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:09:24,035:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:10:10,753:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:10:11,683:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:10:11,912:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:10:23,019:INFO:mainLog:Thread-7 (toptanciScraper)] Pulled products links total: 5188
+[2022-12-29 13:10:23,030:INFO:mainLog:Thread-7 (toptanciScraper)] Processing products start
+[2022-12-29 13:11:43,770:INFO:mainLog:MainThread] New TOPTANCI session has been started
+[2022-12-29 13:11:44,700:INFO:mainLog:Thread-7 (toptanciScraper)] New page request has been made | Response: 200
+[2022-12-29 13:11:44,923:INFO:mainLog:Thread-7 (toptanciScraper)] Categories found count: 8
+[2022-12-29 13:11:44,943:INFO:mainLog:Thread-7 (toptanciScraper)] Pulled products links total: 5188
+[2022-12-29 13:11:44,953:INFO:mainLog:Thread-7 (toptanciScraper)] Processing products start
