@@ -1,11 +1,12 @@
+import requests
 from bs4 import BeautifulSoup
 from progressbar import progressbar
-import requests
-from deep_translator import GoogleTranslator
-from app.tasks import category_maker
-from extraction.dump_category import check_category
 
-ts = GoogleTranslator(source="tr", target="en")
+from config.settings import settings
+from models.dump_category import check_category
+from tasks import category_maker
+
+turk_translate = settings.turk_translate
 
 with requests.Session() as s:
     s.headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
@@ -24,7 +25,7 @@ with requests.Session() as s:
 
         # Category's Title and ID
         main_element = element.find('a', class_='nav-link')
-        element_title = ts.translate((main_element.text).strip())
+        element_title = turk_translate.translate((main_element.text).strip())
         sub_element = element.find('div', class_='list-group')
         sub_categories = sub_element.find_all('a')
         for sub in sub_categories:
@@ -35,7 +36,7 @@ with requests.Session() as s:
             sub_main_element = sub_main_soup.select('ul.list-group.list-group-flush')[1]
             sub_main_element_link = sub_main_element.find_all('a')
             for sub_link in sub_main_element_link:                
-                sub_link_title = ts.translate((sub_link.text).strip())            
+                sub_link_title = turk_translate.translate((sub_link.text).strip())            
                 category_maker(sub, sub_link_title, category_list)
 
               
