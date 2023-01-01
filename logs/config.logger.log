@@ -3687,3 +3687,6 @@ KeyError: 0
 [2023-01-02 02:06:28,406: INFO] Body request has been sent
 [2023-01-02 02:06:33,257: INFO] Main image upload is successful | Status code: 200 | Reason: OK | Image name: media/51749824.jpg
 [2023-01-02 02:06:33,265: INFO] Product created successfully with ID: 520760318 | SKU: [11575245]
+[2023-01-02 02:06:39,447: INFO] Category processed successfully | Arabic: Earring | English: حلق الاذن
+[2023-01-02 02:06:39,450: INFO] Category filling is done
+[2023-01-02 02:06:40,354: INFO] Body request has been sent
