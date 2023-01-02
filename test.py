@@ -1,201 +1,70 @@
-import json
 import re
-
+from bs4 import BeautifulSoup
 import requests
 
-from config.settings import settings
-from models.category_processor import category_processor
-from models.options_processor import options_fill
-from models.text_processor import text_processor
-from tasks.checks import clear_all
-from app.celery_server import celery
+headers = {
+    'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'}
+a = 'https://toptanci.com/xuping-kalp-zirkon-tasli-luks-kupe-u-223843'
+b = 'https://toptanci.com/tasli-buyuk-tasli-ebruli-bros-u-3202'
+c = 'https://toptanci.com/modelli-esarp-miknatisi-15-cm-u-221402'
+d = 'https://toptanci.com/tasli-ort-boy-ebruli-bros-u-22901'
+try:
+    product_link = requests.get(a, headers=headers)
+    product_soup = BeautifulSoup(product_link.content, "html.parser")
+except Exception as e:
+    print(
+        f"Product link error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason}")
 
-logger = settings.logger
-arabic_translate = settings.arabic_translate
-
-
-# Creates a product and assign the main product image
-@celery.task()
-def create_product(message, MCategory, categories, media_path):
-    global ResContent, Main, body, seoNameEn
-    main_category = main_category_en = None
+select_sub = product_soup.select('ol.breadcrumb.text-truncate')[0]
+select_sub2 = select_sub.select('li.breadcrumb-item')
+if len(select_sub2) == 4:
+    sub_main_category = re.sub('\n', '', select_sub2[2].text).strip()
+else:
+    sub_main_category = None
+product_name = product_soup.find('div', class_='col-10').contents[1].text
+attrs_list = product_soup.select('table.table.table-hover.table-sm')
+atrributes = {"color": [], "price": [], "stock": [], "code": []}
+if attrs_list:
+    for attr in attrs_list:
+        stok_yok = attr.find('div', text=re.compile("Stok Yok"))
+        if stok_yok:
+            continue
+        color_attr = attr.find('td', attrs={'style': 'width:30%;'}).text
+        price_attr = re.sub(',', '.', re.sub('\₺', '', attr.find(
+            'div', text=re.compile(r'\₺')).text).strip())
+        stock_attr = int(attr.find('strong', text=re.compile(r'\d+')).text)
+        code_attr = int(attr.find('td', class_="",
+                        text=re.compile(r'\s\d+\s|\d+')).text)
+        
+        atrributes['color'].append(color_attr)
+        atrributes['price'].append(price_attr)
+        atrributes['stock'].append(stock_attr)
+        atrributes['code'].append(code_attr)
+    product_desc = re.sub(r'\w+;', '', product_soup.select('div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip()
+    product_images = product_soup.select('img.img-fluid.btnVariantSmallImage')
+else:
+    attrs_list = product_soup.find('div',class_='col-md-6 p-4 bg-light')
+    price_attr = float(re.sub(',', '.', re.sub('\₺', '', attrs_list.find(text=re.compile(r'\₺')).text).strip()))
+    stock_attr = int(re.sub('Stok|\:|\s', '',attrs_list.find(text=re.compile(r'Stok|\:\d+')).text))
+    code_attr = int(re.sub('Barkod|\:|\s', '',attrs_list.find(text=re.compile(r'Barkod|\:\d+')).text))
     
-    # Checking message type
-    if message:
-        try:
-            # Text processing
-            RefinedTxt = text_processor(message)
+    product_desc = attrs_list.find(class_='p-3 bg-white border rounded-3').text.strip()
+    product_images = product_soup.find_all('img', attrs={'width': 1000, 'height': 1000})
+    
+    atrributes['color'].append('Not set')
+    atrributes['price'].append(price_attr)
+    atrributes['stock'].append(stock_attr)
+    atrributes['code'].append(code_attr)
+    
+    
+images = {"color": [], "link": []}
+for image in product_images:
+    img_link = image.attrs['data-src']
+    img_color = image.attrs['alt']
 
-            # Condition to check for invalid message length
-            if len(RefinedTxt) < 7:
-                clear_all(media_path)
-                logger.error(
-                    f"Invalid message length found | Length: {len(RefinedTxt)}"
-                )
-                return
-
-            # Creating variables with ready to use data from telegram message
-            name = RefinedTxt[1].strip()
-            nameEn = arabic_translate.translate(name)
-            nameEn = re.sub('a ', '', nameEn)
-            nameEn = nameEn.capitalize()
-            # Checking for invalid criteria
-            if re.search('السيري', name) or re.search('السيري', name):
-                clear_all(media_path)
-                logger.error(
-                    'Invalid name found')
-                return
-
-            size = RefinedTxt[2]
-            size = re.sub('\D', '', size)
-            pcQty = RefinedTxt[3]
-            pcQty = int(re.sub('\D', '', pcQty))
-            price = RefinedTxt[4]
-            price = float(re.sub('[^\d|^\d.\d]', '', price))
-            pcPrice = RefinedTxt[5]
-            pcPrice = int(re.sub('\D', '', pcPrice))
-            sku = RefinedTxt[6]
-            if re.search('-', sku):
-                sku = sku.replace("كود الموديل", "")
-                sku = sku.replace('-', '')
-                sku = sku.split()
-                sku = str(sku[1]) + '-' + str(sku[0])
-            else:
-                sku = re.sub('[^a-zA-Z\d\-]', '', sku)
-            true = True
-            false = False
-
-            # Category values
-            telegram_category = RefinedTxt[0].strip()
-            if re.search('ماركه', telegram_category) or re.search('ماركة', telegram_category):
-                clear_all(media_path)
-                logger.warning(
-                    f'Brand found with sku: {sku}')
-                return
-            
-            # Assigning categories using a for loop and a condition to match stored category list
-            main_category, main_category_en ,category_ids, main_category_id, category_json = category_processor(
-                telegram_category, categories, MCategory)
-
-            # Options values
-            OpValues = [2, 3, 5]
-            OpBody = []
-
-            # Extract options from processed text
-            options_fill(RefinedTxt, false, OpValues, OpBody)
-
-            # Create a product request body   
-            if main_category_en:         
-                seoNameEn = main_category_en + ' / ' + nameEn
-            else:
-                seoNameEn = nameEn
-                
-            if main_category_en:     
-                seoName = main_category + ' / ' + name
-            else:
-                seoName = name
-            
-            body = {
-                "sku": sku,
-                "unlimited": true,
-                "inStovalue": true,
-                "name": nameEn,
-                "nameTranslated": {
-                    "ar": name,
-                    "en": nameEn
-                },
-                "price": price,
-                "enabled": true,
-                "options": OpBody,
-                "description": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>",
-                "descriptionTranslated": {
-                    "ar": "<b>اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة    من الملابس التركية واحدث الصيحات في الأزياء النسائية والرجالية والاطفال التي تناسب جميع الأذواق.   بمقاسات وألوان مختلفة.</b>",
-                    "en": "<b>Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colors.</b>"
-                },
-                "categoryIds": category_ids,
-                "categories": category_json,
-                "defaultCategoryId": main_category_id,
-                "seoTitle": f'{seoNameEn}',
-                "seoTitleTranslated": {
-                    "ar": seoName,
-                    "en": seoNameEn
-                },
-                "seoDescription": "Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colours.",
-                "seoDescriptionTranslated": {
-                    "ar": "اختار/ي أفضل المنتجات من مئات الماركات الراقية التركية. نقدم لك/ي أكبر تشكيلة    من الملابس التركية واحدث الصيحات في الأزياء النسائية والرجالية والاطفال التي تناسب جميع الأذواق.   بمقاسات وألوان مختلفة.",
-                    "en": "Choose the best products from hundreds of Turkish high-end brands. We offer you the largest selection of Turkish clothes and the latest trends in women's, men's and children's fashion that suit all tastes. In different sizes and colours."
-                },
-                "attributes": [{"name": "Note", "nameTranslated": {"ar": "ملاحظة", "en": "Note"},
-                                "value": "The choice of colors is done at the start of processing the order.",
-                                "valueTranslated": {
-                    "ar": "اختيار الألوان يتم عند البدء بتجهيز الطلبية",
-                          "en": "The choice of colors is done at the start of processing the order."
-                }, "show":   "DESCR", "type": "UPC"}, {"name": "Brand", "nameTranslated": {"ar": "العلامة التجارية", "en": "Brand"},
-                                                       "value": "Al Beyan Fashion™",
-                                                       "valueTranslated": {
-                    "ar": "Al Beyan Fashion™",
-                    "en": "Al Beyan Fashion™"
-                }, "show":   "DESCR", "type": "BRAND"}],
-                "subtitle": "The displayed price is for the full set",
-                "subtitleTranslated": {
-                    "ar": "السعر المعروض للسيري كامل",
-                    "en": "The displayed price is for the full set"
-                }
-            }
-
-            # Parsing collected data
-            ResContent, resCode = poster(body)
-            # Feedback and returning response and media_path new values
-            if resCode == 200:
-                # Created product ID
-                if 'id' in ResContent:
-                    ItemId = ResContent['id']
-                    logger.info(
-                        f"Product created successfully with ID: {ItemId} | SKU: {sku}"
-                    )
-                    return ItemId
-                else:
-                    logger.error(
-                        f"Product ID is empty?! | Response: {ResContent} | Sku: {sku}")
-                    return ItemId
-
-            elif resCode == 400:
-                logger.error(
-                    f"New product body request parameters are malformed | Sku: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
-                )
-                clear_all(media_path)
-                return None
-            elif resCode == 409:
-                logger.warning(
-                    f"SKU_ALREADY_EXISTS: {sku} | Error Message: {ResContent['errorMessage']} | Error code: {ResContent['errorCode']}"
-                )
-                clear_all(media_path)
-                return None
-            else:
-                logger.info(
-                    f"Failed to create a new product")
-                clear_all(media_path)
-                return None
-
-        # Errors handling
-        except IndexError as e:
-            logger.exception(e)
-            return None
-
-        except KeyError as e:
-            logger.exception(e)
-            return None
-
-        except ValueError as e:
-            logger.exception(e)
-            return None
-
-def poster(body):
-
-    # Sending the POST request to create the products
-    postData = json.dumps(body)
-    response = requests.post(settings.products_url, data=postData, headers=settings.ecwid_headers)
-    resCode = int(response.status_code)
-    response = json.loads(response.text.encode('utf-8'))
-    logger.info("Body request has been sent")
-    return response, resCode
+    images['link'].append(img_link)
+    images['color'].append(img_color)
+if any(atrributes.values()):
+    print('s')
+else:
+    print('f')

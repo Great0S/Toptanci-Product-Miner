@@ -1,3 +1,4 @@
+import glob
 import json
 import os
 import re
@@ -13,8 +14,6 @@ from tasks.create_products import create_product
 
 logger = settings.logger
 
-# products_link = {"Bijouterie": [], "Accessory": [], "Cosmetic": [], "Souvenir": [], "party material": [
-# ], "Textile": [], "Natural Stone & Jewelry Materials": [], "Packaging & Showcase Aks.": []}
 products = []
 URL = 'https://toptanci.com/'
 headers = {
@@ -27,7 +26,7 @@ def toptanciScraper():
     global json_data, progress, session, main_count, products
 
     try:
-        with Progress(SpinnerColumn(),TextColumn("[progress.description]{task.description}"), transient=True,) as progress:
+        with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True,) as progress:
 
             # task1 = progress.add_task("[red]Categories")
             # task2 = progress.add_task("[green]Sub-Categories")
@@ -50,7 +49,7 @@ def toptanciScraper():
             main_count = 0
 
             progress.add_task(description="Exteracting links...", total=None)
-            
+
             if os.path.exists('dumps/unprocessed.json'):
                 pass
             else:
@@ -63,22 +62,17 @@ def toptanciScraper():
                 save_data(links, 'unprocessed')
 
             progress.remove_task(0)
-            # progress.remove_task(1)
-            # progress.remove_task(2)
-            
+
             open_json = open('dumps/unprocessed.json', 'r', encoding='utf-8')
             js_data = json.load(open_json)
-            # for size in js_data.values():
-            #     for sub_size in size:
-            #         for sub_sub in sub_size.values():
             main_count = len(js_data)
 
             logger.info(f'Pulled products links total: {main_count}')
             logger.info("Exteraction done!")
-            
             logger.info(f'Processing links start')
+
             progress.add_task(description="Processing links...", total=None)
-            
+
             if os.path.exists('dumps/data.json'):
                 pass
             else:
@@ -86,11 +80,12 @@ def toptanciScraper():
                     p.map(get_data, js_data)
 
                 save_data(products, 'data')
+
             progress.remove_task(1)
+
             logger.info("All data has been processed")
-            # open_json_data = open('dumps/data.json', 'r', encoding='utf-8')
-            # json_data = json.load(open_json_data)
-            return json_data
+
+            return
     except requests.exceptions.ChunkedEncodingError:
         time.sleep(1)
 
@@ -160,39 +155,76 @@ def get_data(item_link):
         else:
             main_category = re.sub('\n', '', select_sub2[1].text).strip()
             sub_category = None
-        product_name = product_soup.find('div', class_='col-10').contents[1].text
+        product_name = product_soup.find(
+            'div', class_='col-10').contents[1].text
         attrs_list = product_soup.select('table.table.table-hover.table-sm')
         atrributes = {"color": [], "price": [], "stock": [], "code": []}
-        for attr in attrs_list:
-            stok_yok = attr.find('div', text=re.compile("Stok Yok"))
-            if stok_yok:
-                break
-            color_attr = attr.find('td', attrs={'style': 'width:30%;'}).text
-            price_attr = re.sub(',', '.', re.sub('\₺', '', attr.find('div', text=re.compile(r'\₺')).text).strip())
-            stock_attr = int(attr.find('strong', text=re.compile(r'\d+')).text)
-            code_attr = int(attr.find('td', class_="", text=re.compile(r'\s\d+\s|\d+')).text)
-            atrributes['color'].append(color_attr)
+        if attrs_list:
+            for attr in attrs_list:
+                stok_yok = attr.find('div', text=re.compile("Stok Yok"))
+                if stok_yok:
+                    break
+                color_attr = attr.find(
+                    'td', attrs={'style': 'width:30%;'}).text
+                price_attr = re.sub(',', '.', re.sub('\₺', '', attr.find(
+                    'div', text=re.compile(r'\₺')).text).strip())
+                stock_attr = int(
+                    attr.find('strong', text=re.compile(r'\d+')).text)
+                code_attr = int(attr.find('td', class_="",
+                                text=re.compile(r'\s\d+\s|\d+')).text)
+                atrributes['color'].append(color_attr)
+                atrributes['price'].append(price_attr)
+                atrributes['stock'].append(stock_attr)
+                atrributes['code'].append(code_attr)
+            product_desc = re.sub(r'\w+;', '', product_soup.select(
+                'div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip()
+            product_images = product_soup.select(
+                'img.img-fluid.btnVariantSmallImage')
+        else:
+            attrs_list = product_soup.find(
+                'div', class_='col-md-6 p-4 bg-light')
+            price_attr = float(re.sub(',', '.', re.sub(
+                '\₺', '', attrs_list.find(text=re.compile(r'\₺')).text).strip()))
+            stock_attr = int(re.sub('Stok|\:|\s', '', attrs_list.find(
+                text=re.compile(r'Stok|\:\d+')).text))
+            code_attr = int(re.sub('Barkod|\:|\s', '', attrs_list.find(
+                text=re.compile(r'Barkod|\:\d+')).text))
+
+            if sub_category:
+                product_desc = attrs_list.find(
+                    class_='p-3 bg-white border rounded-3').text.strip()
+            else:
+                product_desc = attrs_list.find(
+                    class_='p-3 bg-white border rounded-3').text.strip()
+
+            atrributes['color'].append('Not set')
             atrributes['price'].append(price_attr)
             atrributes['stock'].append(stock_attr)
             atrributes['code'].append(code_attr)
-        product_desc = re.sub(r'\w+;', '', product_soup.select('div.p-3.bg-white.border.rounded-3')[0].contents[1].contents[0].text).strip()
-        product_images = product_soup.select('img.img-fluid.btnVariantSmallImage')
+
+            product_images = product_soup.find_all(
+                'img', attrs={'width': 1000, 'height': 1000})
+
         images = {"color": [], "link": []}
         for image in product_images:
             img_link = image.attrs['data-src']
             img_color = image.attrs['alt']
-            images['color'].append(img_link)
-            images['link'].append(img_color)
-        products_update = {"main-category": main_category, "sub-category": sub_category,
-                           "name": product_name, "images": images, "descr": product_desc, "attrs": atrributes}
-        products.append(products_update)
-        
+
+            images['link'].append(img_link)
+            images['color'].append(img_color)
+
+        if any(atrributes.values()):
+            products_update = {"link": item_link, "main-category": main_category, "sub-category": sub_category,
+                               "name": product_name, "images": images, "descr": product_desc, "attrs": atrributes}
+            products.append(products_update)
+        else:
+            logger.info(f"Invalid item | Link: {item_link}")
+
     except requests.exceptions.ChunkedEncodingError:
         time.sleep(1)
     except (Exception, IndexError) as e:
         logger.error(
             f"Product error: {e} | Status: {product_link.status_code} | Reason: {product_link.reason} | Link: {item_link}")
-        
 
 
 def save_data(data, files):
@@ -234,9 +266,14 @@ def main():
     start_time = time.time()
     toptanciScraper()
     logger.info(f"Scraped in {(time.time() - start_time):.2f} seconds")
+
     open_json_data = open('dumps/data.json', 'r', encoding='utf-8')
     json_data = json.load(open_json_data)
-    create_product(json_data)
+    with ThreadPoolExecutor(max_workers=3) as p:
+        p.map(create_product, json_data)
+    Files = glob.glob('media/*')
+    for file in Files:
+        os.remove(file)
 
 
 # clearing the console from unnecessary

@@ -3,7 +3,7 @@ from config.settings import settings
 logger = settings.logger
 
 
-def category_processor(main_category, second_category, categories):
+def category_processor(main_category, second_category, categories, link):
     default_category_ID = default_category_name = default_category_name_ar = second_category_name_ar = second_category_ID = MCategory = default_category_name_parent = None
     try:
         for value in categories:
@@ -28,7 +28,7 @@ def category_processor(main_category, second_category, categories):
 
         if default_category_name:
             logger.info(
-                f"Category processed successfully | Arabic: {default_category_name} | English: {default_category_name_ar}")
+                f"Category processed successfully | Arabic: {default_category_name_ar} | English: {default_category_name}")
         else:
             logger.warning(
                 f"Category {main_category} is not on the list")
@@ -36,7 +36,10 @@ def category_processor(main_category, second_category, categories):
         if default_category_name_parent:
             for value in categories:
                 if value['id'] == default_category_name_parent:
-                    MCategory = value['parentId']
+                    if 'parentId' in value:
+                        MCategory = value['parentId']
+                    else:
+                        MCategory = value['id']
 
         main_category_id = int(MCategory)
 
@@ -56,13 +59,16 @@ def category_processor(main_category, second_category, categories):
             categories_json = {"id": main_category_id,
                                "enabled": True}, {"id": default_category_ID,
                                                   "enabled": True}
-        logger.info("Category filling is done")
+        logger.info("Category processor is done")
 
-    except Exception as e:
-        logger.exception(f"Category filling error occurred: {e}")
+    except ValueError as e:
+        logger.exception(f"Category processor error occurred: {e}")
         default_category_ID = main_category_id
         categories_ids = [main_category_id]
         categories_json = {"id": main_category_id,
                            "enabled": True}
+    except TypeError as e:
+        logger.exception(f'Type Exception: {e} | link: {link}')
+        return
 
     return default_category_name_ar, second_category_name_ar, categories_ids, main_category_id, categories_json
