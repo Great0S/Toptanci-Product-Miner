@@ -1,3 +1,4 @@
+import asyncio
 import glob
 import json
 import os
@@ -8,6 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter, Retry
 from rich.progress import Progress, SpinnerColumn, TextColumn
+from tqdm import tqdm
 
 from config.settings import settings
 from tasks.create_products import create_product
@@ -28,10 +30,10 @@ def toptanciScraper():
     try:
         with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True,) as progress:
 
-            # task1 = progress.add_task("[red]Categories")
-            # task2 = progress.add_task("[green]Sub-Categories")
-            # task3 = progress.add_task("[cyan]Pages")
-
+            # retries = Retry(total=5, backoff_factor=1,
+            #                 status_forcelist=[500, 502, 503, 504, 520])
+            # session.('https://', HTTPAdapter(max_retries=retries))
+            
             session = requests.Session()
             retries = Retry(total=5, backoff_factor=1,
                             status_forcelist=[500, 502, 503, 504, 520])
@@ -44,47 +46,39 @@ def toptanciScraper():
             result = soup.find('body')
             navBar = result.find(class_="navbar-nav")
             page_element = navBar.find_all("li", class_='darken-onshow')
-
             logger.info(f'Categories found count: {len(page_element)}')
             main_count = 0
-
+            
             progress.add_task(description="Exteracting links...", total=None)
-
+            
             if os.path.exists('dumps/unprocessed.json'):
                 pass
             else:
                 with ThreadPoolExecutor(max_workers=100) as p:
                     result = p.map(get_links, page_element)
-                # sub_data.append({f"{sub_name}": links})
-
-                # for data in sub_data:
-                #     products_link[element_title].append(data)
                 save_data(links, 'unprocessed')
 
             progress.remove_task(0)
-
+            
             open_json = open('dumps/unprocessed.json', 'r', encoding='utf-8')
             js_data = json.load(open_json)
             main_count = len(js_data)
-
             logger.info(f'Pulled products links total: {main_count}')
             logger.info("Exteraction done!")
             logger.info(f'Processing links start')
-
+            
             progress.add_task(description="Processing links...", total=None)
-
+            
             if os.path.exists('dumps/data.json'):
                 pass
             else:
-                with ThreadPoolExecutor(max_workers=10) as p:
+                with ThreadPoolExecutor(max_workers=5) as p:
                     p.map(get_data, js_data)
-
                 save_data(products, 'data')
-
+                    
             progress.remove_task(1)
-
+            
             logger.info("All data has been processed")
-
             return
     except requests.exceptions.ChunkedEncodingError:
         time.sleep(1)
@@ -100,17 +94,6 @@ def get_links(page_element):
     element_title = (main_element.text).strip()
     sub_element = page_element.find('div', class_='list-group')
     sub_categories = sub_element.find_all('a')
-    sub_categories_count = len(sub_categories)
-
-    # if os.path.exists('dumps/unprocessed.json'):
-    #     open_js = open('dumps/unprocessed.json', 'r', encoding='utf-8')
-    #     jsn_data = json.load(open_js)
-    #     if len(jsn_data[element_title]) == sub_categories_count:
-    #         continue
-
-    # logger.info(f'Category being processed: {element_title}')
-    # logger.info(f'Pulling products links')
-    # sub_data = []
 
     for sub in sub_categories:
         sub_link = URL+sub.attrs['href']
@@ -149,16 +132,19 @@ def get_data(item_link):
         product_soup = BeautifulSoup(product_link.content, "html.parser")
         select_sub = product_soup.select('ol.breadcrumb.text-truncate')[0]
         select_sub2 = select_sub.select('li.breadcrumb-item')
+        
         if len(select_sub2) == 4:
             main_category = re.sub('\n', '', select_sub2[1].text).strip()
             sub_category = re.sub('\n', '', select_sub2[2].text).strip()
         else:
             main_category = re.sub('\n', '', select_sub2[1].text).strip()
             sub_category = None
+            
         product_name = product_soup.find(
             'div', class_='col-10').contents[1].text
         attrs_list = product_soup.select('table.table.table-hover.table-sm')
         atrributes = {"color": [], "price": [], "stock": [], "code": []}
+        
         if attrs_list:
             for attr in attrs_list:
                 stok_yok = attr.find('div', text=re.compile("Stok Yok"))
@@ -189,30 +175,28 @@ def get_data(item_link):
                 text=re.compile(r'Stok|\:\d+')).text))
             code_attr = int(re.sub('Barkod|\:|\s', '', attrs_list.find(
                 text=re.compile(r'Barkod|\:\d+')).text))
-
+            
             if sub_category:
                 product_desc = attrs_list.find(
                     class_='p-3 bg-white border rounded-3').text.strip()
             else:
                 product_desc = attrs_list.find(
                     class_='p-3 bg-white border rounded-3').text.strip()
-
+                
             atrributes['color'].append('Not set')
             atrributes['price'].append(price_attr)
             atrributes['stock'].append(stock_attr)
             atrributes['code'].append(code_attr)
-
-            product_images = product_soup.find_all(
-                'img', attrs={'width': 1000, 'height': 1000})
-
+            product_images = product_soup.find_all('img', attrs={'width': 1000, 'height': 1000})
+            
         images = {"color": [], "link": []}
+        
         for image in product_images:
             img_link = image.attrs['data-src']
             img_color = image.attrs['alt']
-
             images['link'].append(img_link)
             images['color'].append(img_color)
-
+            
         if any(atrributes.values()):
             products_update = {"link": item_link, "main-category": main_category, "sub-category": sub_category,
                                "name": product_name, "images": images, "descr": product_desc, "attrs": atrributes}
@@ -231,20 +215,7 @@ def save_data(data, files):
     global json_data
     File_path = f'dumps/{files}.json'
     if os.path.exists(File_path):
-        pass
-        # # Dumping categories into a dict var
-        # open_json = open(File_path, 'r', encoding='utf-8')
-        # json_data = json.load(open_json)
-        # for record in data[main]:
-        #         if record in json_data[main]:
-        #             continue
-        #         else:
-        #             json_data[main].append(record)
-        #             with open(File_path, 'w', encoding='utf-8') as file:
-        #                 file.truncate()
-        #                 json.dump(json_data, file, ensure_ascii=False)
-        #             file.close()
-
+        pass     
     else:
         with open(File_path, 'w', encoding='utf-8') as file:
             json.dump(data, file, ensure_ascii=False)
@@ -257,20 +228,17 @@ def save_data(data, files):
 
 def main():
     global json_data
-
-    # from threading import Thread
-    # new_thread = Thread(target=toptanciScraper)
-    # new_thread.start()
-    # while not json_data:
-    #     time.sleep(30)
+    
     start_time = time.time()
     toptanciScraper()
     logger.info(f"Scraped in {(time.time() - start_time):.2f} seconds")
 
     open_json_data = open('dumps/data.json', 'r', encoding='utf-8')
     json_data = json.load(open_json_data)
-    with ThreadPoolExecutor(max_workers=3) as p:
-        p.map(create_product, json_data)
+    
+    with ThreadPoolExecutor(max_workers=3) as p:            
+        result = list(tqdm(p.map(create_product, json_data), total=len(json_data)))
+        
     Files = glob.glob('media/*')
     for file in Files:
         os.remove(file)
