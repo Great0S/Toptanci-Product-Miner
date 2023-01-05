@@ -29,6 +29,7 @@ def create_product(product):
         name = translate_text(product['name'], 'tr')
         nameAr = translate_text(name, 'en')
 
+        desc = desc_ar = None
         if product['descr']:
             desc = translate_text(product['descr'], 'tr')
             desc_ar = translate_text(desc, 'en')
@@ -213,8 +214,7 @@ def uploading(product, sku, attr, product_id):
                 main_image.write(content.content)
             main_image.close()
             main_image = open(main_image_name, 'rb').read()
-            main_image_response = requests.post(
-                                f'https://app.ecwid.com/api/v3/63690252/products/{product_id}/image{token}', data=main_image, headers=headers)
+            main_image_response = requests.post(f'https://app.ecwid.com/api/v3/63690252/products/{product_id}/image{token}', data=main_image, headers=headers)
                         
             if main_image_response.status_code == 200:
                 file_size = os.path.getsize(main_image_name)
@@ -226,8 +226,8 @@ def uploading(product, sku, attr, product_id):
             elif main_image_response.status_code == 422:
                 logger.warning(f"Main image upload is not successful | Reason: {main_image_response.content} | Status: {main_image_response.status_code} | URL: {url}")
                 break
-    except Exception as e:
-        logger.exception(e)
+    except KeyError as e:
+        logger.error(f"Key error: {e} | Link: {url}")
 
 def poster(body):
 
